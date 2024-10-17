@@ -1,5 +1,6 @@
 # c0nfig web
 
+'/assets/img/pez.gif'
 
 
 ```shell
