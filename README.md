@@ -1,3 +1,3 @@
 # c0nfig-17
 
-![Desktop View](/assets/img/mod.png)
+![Desktop View](/assets/img/logo.png)
