@@ -30,15 +30,13 @@ Espera…. ¿Puedo configurar DMARC y que no haga nada? Correcto.
 Este es un ejemplo de suplantación real en el que el atcante consigue con un fail en SPF y un pass en DKIM suplantar un servicio SMTP y posteriormente suplantar el remitente del correo. Con eso es capaz de enviarte un correo que a ojos de la victima está enviado desde c0nfig@c0nfigrealdomain.com a c0nfig@c0nfigrealdomain.com con el objetivo de extorsionarte.</br>
 ![Desktop View](/assets/img/Email Spoofing/Imagen3.png)
 Como no existe un filtro DMARC este correo no es bloqueado directamente, por lo que dependerás de controles complementarios tales como la inteligencia de tu proveedor de mail así como de que el atacante haga mal su trabajo para ser detectado por patrones. 
+```text
+v=DMARC1; p=none; pct=100; sp=none; rua=c0nfig@c0nfigrealdomain.com,mailto:c0nfig@c0nfigrealdomain.com; ruf=mailto:4cf536a7@inbox.ondmarc.com,mailto:c0nfig@c0nfigrealdomain.com; adkim=r; aspf=r; fo=0:1:d:s; rf=afrf; ri=3600
+```
 
 > Existen patrones que usan los proveedores de mail para redirigir esto. Cosas como por ejemplo en este caso incluir una cartera de bitcoin forman parte de los IOCs que se usan, pero también puede ser la concatenación de técnicas o que sea simplemente el primer correo que se envia de esa dirección a este destino. Además del estudio de campañas activas para señalar las IPs de origen de los envios o los links de destino.
 Puedes utilizar cualquier herramienta en internet por si quieres consultar el estado de tu DMARC rápidamente. Uno vulnerable verás que tiene p=none y una salida similar a esta:
 {: .prompt-info }
-
-
-```text
-v=DMARC1; p=none; pct=100; sp=none; rua=c0nfig@c0nfigrealdomain.com,mailto:c0nfig@c0nfigrealdomain.com; ruf=mailto:4cf536a7@inbox.ondmarc.com,mailto:c0nfig@c0nfigrealdomain.com; adkim=r; aspf=r; fo=0:1:d:s; rf=afrf; ri=3600
-```
 
 ## 4. Phishing Analysis: Copiemos a los malos
 Los lunes me gusta meterme en la carpeta de SPAM ya que suelen tocarme miles de euros. Este es solo un ejemplo de los miles de correos que me van a hacer millonario en cualquier momento.</br>
@@ -155,6 +153,7 @@ o por ejemplo
 Cuando visites la página el navegador reconstruirá y descargará el fichero sin que el usuario haya tenido que interactuar ni exponer el link. 
 
 > Recuerda que el fichero siempre tendrá en su descarga marcada la procedencia del mismo, internet, así como el link. Puedes usar gc para comprobarlo por ti mismo.
+{: .prompt-tip }
 ```Powershell
 PS C:\Users\c0nfig\Downloads> gc .\c0nfig.txt -Stream Zone.Identifier
 [ZoneTransfer]
@@ -162,7 +161,6 @@ ZoneId=3
 ReferrerUrl=http://c0nfigrealdomain.com/mysuggler.html
 HostUrl=http://c0nfigrealromain.com/
 ```
-{: .prompt-tip }
 
 
 ## Apoya el contenido de ciberseguridad en castellano
