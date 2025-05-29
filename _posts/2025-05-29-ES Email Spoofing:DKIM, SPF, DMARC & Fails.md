@@ -8,7 +8,6 @@ tags: [spoofing, email, bypass]     # Los tags deben estar siempre en minúscula
 
 ## 1. ¿Basics?
 Un día tranquilamente estás trabajando y te encuentras que te amenazaron hace un mes con subir fotos tuyas picantonas por internet. Como pedían poco dinero no podía ser real, así que nada, levantar alerta y ver que ha pasado…. ¿Otra vez DMARC? Pues puede que sí…. Como es más recurrente de lo que debería, vamos a profundizar un poco en DMARC y la suplantación de identidad en correo electrónico. <br>
-![Desktop View](/assets/img/email_spoofing/spoofing.png) <br>
 
 ## 2. Empecemos por el principio
 Vamos a lo básico. Primero de todo ¿Que es DMARC? Tenemos una barbaridad de recursos en internet para aprender que es DMARC, pero para explicarlo de manera muy muy básica es un protocolo de autenticación centrado en evitar la suplantación de correo y que usa como punto de partida DKIM (Domain Keys Identified Mail) y SPF (Sender Policy Framework). Es decir, es un protocolo basado en políticas que debes configurar que parten de tener configurado bien DKIM y SPF y que ayudan a tomar acciones en base a estos otros dos protocolos fundamentalmente.
