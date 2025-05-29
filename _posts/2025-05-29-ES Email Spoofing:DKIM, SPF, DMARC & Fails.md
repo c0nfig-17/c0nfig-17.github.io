@@ -7,10 +7,10 @@ tags: [spoofing, email, bypass]     # Los tags deben estar siempre en minúscula
 ---
 
 
-# 1. ¿Basics?
+## 1. ¿Basics?
 Un día tranquilamente estás trabajando y te encuentras que te amenazaron hace un mes con subir fotos tuyas picantonas por internet. Como pedían poco dinero no podía ser real, así que nada, levantar alerta y ver que ha pasado…. ¿Otra vez DMARC? Pues puede que sí…. Como es más recurrente de lo que debería, vamos a profundizar un poco en DMARC y la suplantación de identidad en correo electrónico.
 
-# 2. Empecemos por el principio
+## 2. Empecemos por el principio
 Vamos a lo básico. Primero de todo ¿Que es DMARC? Tenemos una barbaridad de recursos en internet para aprender que es DMARC, pero para explicarlo de manera muy muy básica es un protocolo de autenticación centrado en evitar la suplantación de correo y que usa como punto de partida DKIM (Domain Keys Identified Mail) y SPF (Sender Policy Framework). Es decir, es un protocolo basado en políticas que debes configurar que parten de tener configurado bien DKIM y SPF y que ayudan a tomar acciones en base a estos otros dos protocolos fundamentalmente.
 SPF sirve para que yo que tengo el dominio “c0nfig.com” pueda enviar correos bajo “@c0nfig.com” indicando cuales son las IPs que son usadas para remitir esos correos. Es decir si tengo un servidor de correo en 127.0.0.1 y el SPF configurado en mi DNS correctamente todo el mundo sabrá que solo pueden recibir correos de cuentas como “auditor@c0nfig.com”  en caso de que provengan de 127.0.0.1. En caso de no ser así puede ser un comportamiento malicioso.
 Por otro lado tenemos DKIM, ayuda a que el receptor haga la verificación de que yo  “auditor@c0nfig.com” envié un correo mediante una firma autorizada por mi parte la cual puede verificar en el DNS.
@@ -20,7 +20,7 @@ Como puedes ver el proveedor de correo, en este caso gmail, de c0nfigrealmail@gm
 Puedes verificar además con los miles de analizadores que hay en internet si se cumple o no el filtro DMARC en un dominio. Por ejemplo para steampowered.com aparece correctamente configurado el filtro DMARC.<br>
 ![Desktop View](/assets/img/email_spoofing/Imagen2.png) <br>
 
-# 3. Misconfigs en DMARC
+## 3. Misconfigs en DMARC
 ¿Has configurado bien DMARC? Porque claro si haces “p=none”…..
 Una vez has configurado SPF, DKIM y te has sentado a los basics de DMARC toca ponerlo a funcionar. Existen 3 políticas básicas de DMARC:
 •	p=none : supervisión o monitorización. Genera reportes pero no bloquea.
@@ -38,7 +38,7 @@ v=DMARC1; p=none; pct=100; sp=none; rua=c0nfig@c0nfigrealdomain.com,mailto:c0nfi
 Puedes utilizar cualquier herramienta en internet por si quieres consultar el estado de tu DMARC rápidamente. Uno vulnerable verás que tiene p=none y una salida similar a esta:
 {: .prompt-info }
 
-# 4. Phishing Analysis: Copiemos a los malos
+## 4. Phishing Analysis: Copiemos a los malos
 Los lunes me gusta meterme en la carpeta de SPAM ya que suelen tocarme miles de euros. Este es solo un ejemplo de los miles de correos que me van a hacer millonario en cualquier momento.<br>
 ![Desktop View](/assets/img/email_spoofing/Imagen4.png) <br>
 Desde luego “CashApp” me va a hacer rico, pero espera… ¿porqué aparece como que el mail se ha enviado desde mi cuenta? Correcto el “Trusted Sender” es mi propio correo. Y aparece enviado para me@aol.com que no es mi cuenta…. ¿raro no? CashApp suele ser confiable… algo habrá pasado... <br>
@@ -72,7 +72,7 @@ To: me@aol.com
 El campo “Delivered-To:” se envia al comienzo, peeeeeeeero puedes tratar de confundir a Gmail (y como se demuestra conseguirlo) incluyendo diferentes referencias al envio sumándolo a los hops. 
 
 
-# 5. HTLM Smugling
+## 5. HTLM Smugling
 HTML Smuglig es una técnica usada para esconder ficheros en filtros de contenido mediante javascript. Este es un ejemplo de link malicioso real embebido en un phishing:
 
 ```html
