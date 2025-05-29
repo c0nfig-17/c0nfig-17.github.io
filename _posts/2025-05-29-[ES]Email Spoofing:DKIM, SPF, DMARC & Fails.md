@@ -1,5 +1,5 @@
 ---
-title: [ES] Email Spoofing:DKIM, SPF, DMARC & Fails
+title: ES Email Spoofing:DKIM, SPF, DMARC & Fails
 date: 2025-05-29
 categories: [Email]
 tags: [spoofing, email, bypass]     # Los tags deben estar siempre en minúsculas.
