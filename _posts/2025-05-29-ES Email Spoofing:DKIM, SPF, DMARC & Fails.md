@@ -14,11 +14,11 @@ Un día tranquilamente estás trabajando y te encuentras que te amenazaron hace 
 Vamos a lo básico. Primero de todo ¿Que es DMARC? Tenemos una barbaridad de recursos en internet para aprender que es DMARC, pero para explicarlo de manera muy muy básica es un protocolo de autenticación centrado en evitar la suplantación de correo y que usa como punto de partida DKIM (Domain Keys Identified Mail) y SPF (Sender Policy Framework). Es decir, es un protocolo basado en políticas que debes configurar que parten de tener configurado bien DKIM y SPF y que ayudan a tomar acciones en base a estos otros dos protocolos fundamentalmente.
 SPF sirve para que yo que tengo el dominio “c0nfig.com” pueda enviar correos bajo “@c0nfig.com” indicando cuales son las IPs que son usadas para remitir esos correos. Es decir si tengo un servidor de correo en 127.0.0.1 y el SPF configurado en mi DNS correctamente todo el mundo sabrá que solo pueden recibir correos de cuentas como “auditor@c0nfig.com”  en caso de que provengan de 127.0.0.1. En caso de no ser así puede ser un comportamiento malicioso.
 Por otro lado tenemos DKIM, ayuda a que el receptor haga la verificación de que yo  “auditor@c0nfig.com” envié un correo mediante una firma autorizada por mi parte la cual puede verificar en el DNS.
-Puedes descargarte cualquier mail personal tuyo en formato .eml y analizarlo para ver el contenido, en mi caso he utilizado un correo de Steam que generé para esto. </br>
-![Desktop View](/assets/img/email_spoofing/email1.png)
+Puedes descargarte cualquier mail personal tuyo en formato .eml y analizarlo para ver el contenido, en mi caso he utilizado un correo de Steam que generé para esto. <br>
+![Desktop View](/assets/img/email_spoofing/email1.png) <br>
 Como puedes ver el proveedor de correo, en este caso gmail, de c0nfigrealmail@gmai.com verificó que DKIM y SPF era correcto para este correo y que además la política de DMARC estaba configurada. Es decir, cumpliendo los dos criterios anteriores ese correo pasa la política DMARC y llega a mi bandeja.
-Puedes verificar además con los miles de analizadores que hay en internet si se cumple o no el filtro DMARC en un dominio. Por ejemplo para steampowered.com aparece correctamente configurado el filtro DMARC.</br>
-![Desktop View](/assets/img/email_spoofing/Imagen2.png)
+Puedes verificar además con los miles de analizadores que hay en internet si se cumple o no el filtro DMARC en un dominio. Por ejemplo para steampowered.com aparece correctamente configurado el filtro DMARC.<br>
+![Desktop View](/assets/img/email_spoofing/Imagen2.png) <br>
 
 ## 3. Misconfigs en DMARC
 ¿Has configurado bien DMARC? Porque claro si haces “p=none”…..
@@ -27,8 +27,8 @@ Una vez has configurado SPF, DKIM y te has sentado a los basics de DMARC toca po
 •	p=quarentine : los correos se envían a la carpeta de SPAM
 •	p=reject: Los correos no autentidacos se rechazan y no se entregan.
 Espera…. ¿Puedo configurar DMARC y que no haga nada? Correcto.
-Este es un ejemplo de suplantación real en el que el atcante consigue con un fail en SPF y un pass en DKIM suplantar un servicio SMTP y posteriormente suplantar el remitente del correo. Con eso es capaz de enviarte un correo que a ojos de la victima está enviado desde c0nfig@c0nfigrealdomain.com a c0nfig@c0nfigrealdomain.com con el objetivo de extorsionarte.</br>
-![Desktop View](/assets/img/email_spoofing/Imagen3.png)
+Este es un ejemplo de suplantación real en el que el atcante consigue con un fail en SPF y un pass en DKIM suplantar un servicio SMTP y posteriormente suplantar el remitente del correo. Con eso es capaz de enviarte un correo que a ojos de la victima está enviado desde c0nfig@c0nfigrealdomain.com a c0nfig@c0nfigrealdomain.com con el objetivo de extorsionarte.<br>
+![Desktop View](/assets/img/email_spoofing/Imagen3.png) <br>
 Como no existe un filtro DMARC este correo no es bloqueado directamente, por lo que dependerás de controles complementarios tales como la inteligencia de tu proveedor de mail así como de que el atacante haga mal su trabajo para ser detectado por patrones. 
 ```text
 v=DMARC1; p=none; pct=100; sp=none; rua=c0nfig@c0nfigrealdomain.com,mailto:c0nfig@c0nfigrealdomain.com; ruf=mailto:4cf536a7@inbox.ondmarc.com,mailto:c0nfig@c0nfigrealdomain.com; adkim=r; aspf=r; fo=0:1:d:s; rf=afrf; ri=3600
@@ -39,12 +39,12 @@ Puedes utilizar cualquier herramienta en internet por si quieres consultar el es
 {: .prompt-info }
 
 ## 4. Phishing Analysis: Copiemos a los malos
-Los lunes me gusta meterme en la carpeta de SPAM ya que suelen tocarme miles de euros. Este es solo un ejemplo de los miles de correos que me van a hacer millonario en cualquier momento.</br>
-![Desktop View](/assets/img/email_spoofing/Imagen4.png)
-Desde luego “CashApp” me va a hacer rico, pero espera… ¿porqué aparece como que el mail se ha enviado desde mi cuenta? Correcto el “Trusted Sender” es mi propio correo. Y aparece enviado para me@aol.com que no es mi cuenta…. ¿raro no? CashApp suele ser confiable… algo habrá pasado</br>
-![Desktop View](/assets/img/email_spoofing/Imagen5.png)
-Descargamos el .eml a ver que ha podido pasar aquí.</br>
-![Desktop View](/assets/img/email_spoofing/Imagen6.png)
+Los lunes me gusta meterme en la carpeta de SPAM ya que suelen tocarme miles de euros. Este es solo un ejemplo de los miles de correos que me van a hacer millonario en cualquier momento.<br>
+![Desktop View](/assets/img/email_spoofing/Imagen4.png) <br>
+Desde luego “CashApp” me va a hacer rico, pero espera… ¿porqué aparece como que el mail se ha enviado desde mi cuenta? Correcto el “Trusted Sender” es mi propio correo. Y aparece enviado para me@aol.com que no es mi cuenta…. ¿raro no? CashApp suele ser confiable… algo habrá pasado... <br>
+![Desktop View](/assets/img/email_spoofing/Imagen5.png) <br>
+Descargamos el .eml a ver que ha podido pasar aquí.<br>
+![Desktop View](/assets/img/email_spoofing/Imagen6.png) <br>
 Como podemos ver, aunque el contenido del .eml es más extenso, podemos ver cosas interesantes como la existencia de un SPF bien configurado, es decir yo puedo asegurar que 103.21.89.71 puede enviar correos en nombre de @miks.akenator.com … Teniendo en cuenta que la mayoría de sistemas de detección no te van a pasar no tener SPF configurado, es algo sencillo que te puede facilitar las cosas. Pero existen otras técnicas usadas en este phishing, comentamos algunas.  
 
 ```email
