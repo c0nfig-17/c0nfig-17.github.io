@@ -28,7 +28,7 @@ Una vez has configurado SPF, DKIM y te has sentado a los basics de DMARC toca po
 •	p=reject: Los correos no autentidacos se rechazan y no se entregan.
 Espera…. ¿Puedo configurar DMARC y que no haga nada? Correcto.
 Este es un ejemplo de suplantación real en el que el atcante consigue con un fail en SPF y un pass en DKIM suplantar un servicio SMTP y posteriormente suplantar el remitente del correo. Con eso es capaz de enviarte un correo que a ojos de la victima está enviado desde c0nfig@c0nfigrealdomain.com a c0nfig@c0nfigrealdomain.com con el objetivo de extorsionarte.</br>
-![Desktop View](/assets/img/email_poofing/Imagen3.png)
+![Desktop View](/assets/img/email_spoofing/Imagen3.png)
 Como no existe un filtro DMARC este correo no es bloqueado directamente, por lo que dependerás de controles complementarios tales como la inteligencia de tu proveedor de mail así como de que el atacante haga mal su trabajo para ser detectado por patrones. 
 ```text
 v=DMARC1; p=none; pct=100; sp=none; rua=c0nfig@c0nfigrealdomain.com,mailto:c0nfig@c0nfigrealdomain.com; ruf=mailto:4cf536a7@inbox.ondmarc.com,mailto:c0nfig@c0nfigrealdomain.com; adkim=r; aspf=r; fo=0:1:d:s; rf=afrf; ri=3600
