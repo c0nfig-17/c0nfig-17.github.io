@@ -5,7 +5,7 @@ categories: [Email]
 tags: [spoofing, email, bypass]     # Los tags deben estar siempre en minúsculas.
 
 ---
-
+![Desktop View](/assets/img/email_spoofing/spoofing.png) <br>
 
 ## 1. ¿Basics?
 Un día tranquilamente estás trabajando y te encuentras que te amenazaron hace un mes con subir fotos tuyas picantonas por internet. Como pedían poco dinero no podía ser real, así que nada, levantar alerta y ver que ha pasado…. ¿Otra vez DMARC? Pues puede que sí…. Como es más recurrente de lo que debería, vamos a profundizar un poco en DMARC y la suplantación de identidad en correo electrónico.
