@@ -5,6 +5,7 @@ categories: [Email]
 tags: [spoofing, email, bypass]     # Los tags deben estar siempre en minúsculas.
 
 ---
+
 ![Desktop View](/assets/img/email_spoofing/spoofing.png) <br>
 
 ## 1. ¿Basics?
