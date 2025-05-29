@@ -18,7 +18,7 @@ Puedes descargarte cualquier mail personal tuyo en formato .eml y analizarlo par
 ![Desktop View](/assets/img/Email Spoofing/email1.png)
 Como puedes ver el proveedor de correo, en este caso gmail, de c0nfigrealmail@gmai.com verificó que DKIM y SPF era correcto para este correo y que además la política de DMARC estaba configurada. Es decir, cumpliendo los dos criterios anteriores ese correo pasa la política DMARC y llega a mi bandeja.
 Puedes verificar además con los miles de analizadores que hay en internet si se cumple o no el filtro DMARC en un dominio. Por ejemplo para steampowered.com aparece correctamente configurado el filtro DMARC.</br>
-![Desktop View](/assets/img/Email Spoofing/Imagen2.png)
+![Desktop View]('/assets/img/Email Spoofing/Imagen2.png')
 
 ## 3. Misconfigs en DMARC
 ¿Has configurado bien DMARC? Porque claro si haces “p=none”…..
