@@ -13,7 +13,6 @@ Here you'll find insights, tools, write-ups, and experiments from my journey in 
 
 Whenever possible, posts will be published in both English and Spanish to make the content more accessible to newcomers.
 
-> Offensive mindset. Defensive purpose.
 
 ---
 
@@ -25,6 +24,5 @@ Aquí comparto conocimientos, herramientas, write-ups y experimentos de mi camin
 
 Siempre que sea posible, los posts estarán disponibles tanto en inglés como en castellano para facilitar el acceso a personas nuevas en el área.
 
-> Mentalidad ofensiva. Propósito defensivo.
 
 <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support this Content!', '#455d85', 'A0A41BO608');kofiwidget2.draw();</script> 
