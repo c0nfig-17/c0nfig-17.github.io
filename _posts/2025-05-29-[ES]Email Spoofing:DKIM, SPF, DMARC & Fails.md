@@ -15,10 +15,10 @@ Vamos a lo básico. Primero de todo ¿Que es DMARC? Tenemos una barbaridad de re
 SPF sirve para que yo que tengo el dominio “c0nfig.com” pueda enviar correos bajo “@c0nfig.com” indicando cuales son las IPs que son usadas para remitir esos correos. Es decir si tengo un servidor de correo en 127.0.0.1 y el SPF configurado en mi DNS correctamente todo el mundo sabrá que solo pueden recibir correos de cuentas como “auditor@c0nfig.com”  en caso de que provengan de 127.0.0.1. En caso de no ser así puede ser un comportamiento malicioso.
 Por otro lado tenemos DKIM, ayuda a que el receptor haga la verificación de que yo  “auditor@c0nfig.com” envié un correo mediante una firma autorizada por mi parte la cual puede verificar en el DNS.
 Puedes descargarte cualquier mail personal tuyo en formato .eml y analizarlo para ver el contenido, en mi caso he utilizado un correo de Steam que generé para esto. </br>
-![Desktop View](assets/img/email_spoofing/email1.png)
+![Desktop View](/assets/img/email_spoofing/email1.png)
 Como puedes ver el proveedor de correo, en este caso gmail, de c0nfigrealmail@gmai.com verificó que DKIM y SPF era correcto para este correo y que además la política de DMARC estaba configurada. Es decir, cumpliendo los dos criterios anteriores ese correo pasa la política DMARC y llega a mi bandeja.
 Puedes verificar además con los miles de analizadores que hay en internet si se cumple o no el filtro DMARC en un dominio. Por ejemplo para steampowered.com aparece correctamente configurado el filtro DMARC.</br>
-![Desktop View](assets/img/email_spoofing/Imagen2.png)
+![Desktop View](/assets/img/email_spoofing/Imagen2.png)
 
 ## 3. Misconfigs en DMARC
 ¿Has configurado bien DMARC? Porque claro si haces “p=none”…..
