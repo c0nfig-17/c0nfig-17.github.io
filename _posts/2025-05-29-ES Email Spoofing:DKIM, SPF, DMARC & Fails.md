@@ -75,14 +75,14 @@ El campo “Delivered-To:” se envia al comienzo, peeeeeeeero puedes tratar de 
 ## 3. HTLM Smugling
 HTML Smuglig es una técnica usada para esconder ficheros en filtros de contenido mediante javascript. Este es un ejemplo de link malicioso real embebido en un phishing:
 
-```HTML
+```html
 <a href="https://tinyurl.com/MALICIUS_PAYLOAD" target="_blank">
 ```
 Como hemos dicho antes existen controles por parte de tu proveedor o tu antivirus los cuales tratan los enlaces para poder clasificar el mail y reportarlo. 
 Los atacantes tenemos formas de evitar estos controles, principalmente usando HTML Smugling. Con esto podemos evitar que se analice el enlace para construir la URL en el navegador en la ejecución. 
 Existen multitud de ejemplos como:
 
-```HTML
+```html
 <html>
    <body>
       <script>
@@ -113,7 +113,7 @@ Existen multitud de ejemplos como:
 ```
 o por ejemplo 
 
-```HTML
+```html
 <html>
     <head>
         <title>Your banck</title>
@@ -154,7 +154,7 @@ Cuando visites la página el navegador reconstruirá y descargará el fichero si
 
 > Recuerda que el fichero siempre tendrá en su descarga marcada la procedencia del mismo, internet, así como el link. Puedes usar gc para comprobarlo por ti mismo.
 {: .prompt-tip }
-```Powershell
+```powershell
 PS C:\Users\c0nfig\Downloads> gc .\c0nfig.txt -Stream Zone.Identifier
 [ZoneTransfer]
 ZoneId=3
