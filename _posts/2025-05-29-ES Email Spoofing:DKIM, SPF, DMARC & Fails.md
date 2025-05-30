@@ -70,8 +70,8 @@ Es un header opcional, pero si usas tu nombre de correo pues puede ayudar si no 
 Delivered-To: me@gmail.com
 To: me@aol.com
 ```
-El campo “Delivered-To:” se envia al comienzo, peeeeeeeero puedes tratar de confundir a Gmail (y como se demuestra conseguirlo) incluyendo diferentes referencias al envio sumándolo a los hops. 
-
+El campo “Delivered-To:” se envia al comienzo, peeeeeeeero puedes tratar de confundir a Gmail (y como se demuestra conseguirlo) incluyendo diferentes referencias al envio sumándolo a los hops. <br>
+Si te interesa analizar otros phishing para extraer patrones similares puedes usar el repo [`phishing_pot`](https://github.com/rf-peixoto/phishing_pot) que cuenta con miles de ejemplos de los cuales puedes obtener ideas para filtrar y emular patrones. 
 
 ## 5. HTLM Smugling
 HTML Smuglig es una técnica usada para esconder ficheros en filtros de contenido mediante javascript. Este es un ejemplo de link malicioso real embebido en un phishing:
