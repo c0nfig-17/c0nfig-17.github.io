@@ -21,10 +21,10 @@ Puedes verificar además con los miles de analizadores que hay en internet si se
 
 ## 3. Misconfigs en DMARC
 ¿Has configurado bien DMARC? Porque claro si haces “p=none”…..
-Una vez has configurado SPF, DKIM y te has sentado a los basics de DMARC toca ponerlo a funcionar. Existen 3 políticas básicas de DMARC:
-•	p=none : supervisión o monitorización. Genera reportes pero no bloquea.
-•	p=quarentine : los correos se envían a la carpeta de SPAM
-•	p=reject: Los correos no autentidacos se rechazan y no se entregan.
+Una vez has configurado SPF, DKIM y te has sentado a los basics de DMARC toca ponerlo a funcionar. Existen 3 políticas básicas de DMARC: <br>
+•	p=none : supervisión o monitorización. Genera reportes pero no bloquea. <br>
+•	p=quarentine : los correos se envían a la carpeta de SPAM. <br>
+•	p=reject: Los correos no autentidacos se rechazan y no se entregan. <br>
 Espera…. ¿Puedo configurar DMARC y que no haga nada? Correcto.
 Este es un ejemplo de suplantación real en el que el atcante consigue con un fail en SPF y un pass en DKIM suplantar un servicio SMTP y posteriormente suplantar el remitente del correo. Con eso es capaz de enviarte un correo que a ojos de la victima está enviado desde c0nfig@c0nfigrealdomain.com a c0nfig@c0nfigrealdomain.com con el objetivo de extorsionarte.<br>
 ![Desktop View](/assets/img/email_spoofing/Imagen3.png) <br>
