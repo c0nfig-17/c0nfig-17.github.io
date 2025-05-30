@@ -37,6 +37,8 @@ v=DMARC1; p=none; pct=100; sp=none; rua=c0nfig@c0nfigrealdomain.com,mailto:c0nfi
 Puedes utilizar cualquier herramienta en internet por si quieres consultar el estado de tu DMARC rápidamente. Uno vulnerable verás que tiene p=none y una salida similar a esta:
 {: .prompt-info }
 
+Puedes usar herramientas como [`Spoofy`](https://github.com/MattKeeley/Spoofy) para obtenter los resultados de una lista de dominios de manera más sencilla. 
+
 ## 4. Phishing Analysis: Copiemos a los malos
 Los lunes me gusta meterme en la carpeta de SPAM ya que suelen tocarme miles de euros. Este es solo un ejemplo de los miles de correos que me van a hacer millonario en cualquier momento.<br>
 ![Desktop View](/assets/img/email_spoofing/Imagen4.png) <br>
@@ -160,6 +162,18 @@ ZoneId=3
 ReferrerUrl=http://c0nfigrealdomain.com/mysuggler.html
 HostUrl=http://c0nfigrealromain.com/
 ```
+
+## 6. Content en Base64
+Muchas veces pueden existir controles en el correo para el envio de determinado tipo de caracteres o patrones. Quizás Outloock detecta cadenas de caracteres del tamaño de una dirección de cartera de Bitcoin como malicioso, DNIs o información que se está exfiltrando, contraseñas.... Una manera de evadir algunos de los controles es utilizar Base64. Para ello podemos usar el siguiente contenido. <br>
+```email
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+QnVlbm9zIGTtYXMhCgpFc3RlIGVzIG1pIG51ZXZvIG76bWVybyBkZSBjdWVudGEgMTIzNDU2Nzg5MDExMTIKUmVjdWVyZGEgcmVhbGl6YXIgbGEgdHJhbnNmZXJlbmNpYSBkZSA1MDAuMDAwIEV1cm9zIHlhLgo=
+
+```
+Esto nos permitirá del lado del que lee el correo mostrar un texto evadiendo algunos controles.
+
 
 ---
 ## Apoya el contenido de ciberseguridad en castellano
