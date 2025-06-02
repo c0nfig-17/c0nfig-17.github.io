@@ -1,5 +1,5 @@
 ---
-title: ES Password Craking e Inteligencia para Red Teams
+title: ES Password Cracking e Inteligencia para Red Teams
 date: 2025-06-02
 categories: [Passwords]
 tags: [passwords, hashes]     # Los tags deben estar siempre en minúsculas.
