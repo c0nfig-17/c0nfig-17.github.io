@@ -39,9 +39,10 @@ Suele ser muy interesante obtener de cada una de las webs, o IPs públicas, de u
 Vamos al lio. Al principio nos aseguraremos de tener disponible en nuestra máquina CeWL, el cual podemos obtener de Github mediante el siguiente [`repo`](https://github.com/digininja/CeWL) y consultar su uso desde el propio [`manual`](https://www.kali.org/tools/cewl/) de kali . 
 En caso de no tenerlo disponible usaremos el siguiente comando para instalarlo en nuestro equipo:
 
-```kali
+```text
 sudo apt install cewl
 ```
+
 Nosotros lo que haremos será tirar el siguiente comando, con el cual nos aseguramos que se recogen palabras de maneraas de 6 digitos las cuales se incluyen los emails que localice y me los guarda en un fichero. Además podriamos utilizar el apartado de metadatos que nos puede ser útil para servicios de infra. Usamos la menor potencia del spider por el momento para no generar ningún tipo de impacto.
 
 > No es común pero se consciente que puedes hacer algo de ruido lanzando muchas peticiones. Valora dependiendo del tipo de auditoria los saltos que des. 
@@ -50,7 +51,6 @@ Nosotros lo que haremos será tirar el siguiente comando, con el cual nos asegur
 ```kali
 cewl -m 6 -d 1 -e -v -w /home/usuario/mi_fichero https://www.c0nfigwebsuperchulaymuycara.com/
 ```
-
 En ese momento ya tendré "mi_fichero" con el que habré obtenido gran cantidad de palabras relaccionadas con la entidad
 
 > Recuerda que debes realizar esto con cada una de las compañías o páginas web del mismo grupo empresarial. www.c0nfigwebsuperchulaymuycara.com es interesante pero también c0nfig.com o empleo.c0nfig.com
