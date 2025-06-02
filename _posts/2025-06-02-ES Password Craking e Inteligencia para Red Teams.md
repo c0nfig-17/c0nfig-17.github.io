@@ -39,7 +39,7 @@ Suele ser muy interesante obtener de cada una de las webs, o IPs públicas, de u
 Vamos al lio. Al principio nos aseguraremos de tener disponible en nuestra máquina CeWL, el cual podemos obtener de Github mediante el siguiente [`repo`](https://github.com/digininja/CeWL) y consultar su uso desde el propio [`manual`](https://www.kali.org/tools/cewl/) de kali . 
 En caso de no tenerlo disponible usaremos el siguiente comando para instalarlo en nuestro equipo:
 
-```text
+```bash
 sudo apt install cewl
 ```
 
@@ -48,7 +48,7 @@ Nosotros lo que haremos será tirar el siguiente comando, con el cual nos asegur
 > No es común pero se consciente que puedes hacer algo de ruido lanzando muchas peticiones. Valora dependiendo del tipo de auditoria los saltos que des. 
 {: .prompt-warning }
 
-```kali
+```bash
 cewl -m 6 -d 1 -e -v -w /home/usuario/mi_fichero https://www.c0nfigwebsuperchulaymuycara.com/
 ```
 En ese momento ya tendré "mi_fichero" con el que habré obtenido gran cantidad de palabras relaccionadas con la entidad
@@ -63,7 +63,7 @@ Muchas veces es fundamental saber que política de contraseñas existe realmente
 {: .prompt-warning }
 
 Existen algunas comprobaciones que son fundamentales, ya que ¿si consigues crackearlo y no tienes tiempo? Com CMD y Powershell podemos evaluarlo
- ```cmd
+ ```bash
 C:\C0nfig>net accounts
 Tiempo antes del cierre forzado:                  2
 Duración mín. de contraseña (días):               2
@@ -80,7 +80,7 @@ Con esto sabemos que previsiblemente una contraseña inferior a 8 caracteres no 
 
 Puedes usar herramientas como [`PowerView`](https://github.com/PowerShellMafia/PowerSploit) también para enumerar las políticas del dominio con powershell. 
 
-```kali
+```bash
 powershell Get-DomainPolicyData | select -expand SystemAccess
 ```
 
@@ -92,11 +92,11 @@ Una manera de contribuir al diccionario que vamos a elaborar es utilizar herrami
 ## 6. Iteraciones en el diccionario
 Una vez conseguimos un gran volumen de información podemos tratar de mejorarla realizando iteraciones sobre el diccionario que hemos hecho combinando diferentes elemenyos y patrones que están normalizados. Para esto podemos usar CUPP [`Cupp`](https://github.com/Mebus/cupp.git) <br>
 Simplemente lo inciamos y comenzamos a trabajar.
-```kali
+```bash
 python3 cupp.py -w /home/andi/Desktop/mi_fichero
 ```
 La herramienta es clara y muy sencilla de usar
-```kali
+```bash
     > Do you want to concatenate all words from wordlist? Y/[N]: n
     > Do you want to add special chars at the end of words? Y/[N]: n
     > Do you want to add some random numbers at the end of words? Y/[N]:
@@ -119,26 +119,26 @@ Yo para trabajar trato de ser bastante metódico para no dejarme nada. En este c
 Durante el propio uso de hashcat puedes utilizar funciones las cuales no son del todo habituales para mejorar el crackeo de las contraseñas usando diferentes funcionalidades. 
 Puedes usar reglas por ejemplo para añadir años a las contraseñas.
 
-```kali
+```bash
 hashcat -a 0 -m 1000 hash.txt mi_fichero.cupp.txt -r rules\add-year.rule
 ```
 Una manera de ser más eficiente es utilizar mascaras para por ejemplo usar mayusculas y minúsculas en las mismas posiciones siempre
 
-```kali
+```bash
 hashcat -a 3 -m 1000 C:\usr\hash.txt ?u?l?l?l?l?l?l?l?d
 ```
 Puedes combinar diccionarios usando hashcat
 
-```kali
+```bash
 hashcat -a 1 -m 1000 hash.txt mi_fichero.cupp.txt diccionario_posterior.txt -j $- -k $!
 ```
 Puedes usar combinaciones de números aleatorios del 0000 al 9999.
 
-```kali
+```bash
 hashcat -a 6 -m 1000 hash.txt mi_fichero.cupp.txt ?d?d?d?d
 ```
 Si quieres que los números del del 0000 al 9999 vayan delante puedes usar.
-```kali
+```bash
 hashcat -a 7 -m 1000 hash.txt mi_fichero.cupp.txt ?d?d?d?d
 ```
 
