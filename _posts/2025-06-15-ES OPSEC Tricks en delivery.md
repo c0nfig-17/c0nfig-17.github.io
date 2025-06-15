@@ -1,6 +1,6 @@
 ---
 title: ES OPSEC Tricks en delivery
-date: 2025-06-16
+date: 2025-06-15
 categories: [opsec]
 tags: [opsec, malware]     # Los tags deben estar siempre en minúsculas.
 
