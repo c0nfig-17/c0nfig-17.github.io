@@ -62,7 +62,7 @@ La duda es... ¿de donde saco esa información?... aquí algunos tips:
 ### 3.3 Las excepciones... benditas excepciones...
 Todos sabemos que las compañías grandes tienen un nivel de excepcionado que es inversamente proporcional al volumen de revisiones que se hacen de estas excepciones... Alguien necesitó una vez una herramienta y se excepcionó hasta en el software que se usa para pedir la comida en el comedor (muy lógico), pero... ¿alguien controló esa excepción?. <br>
 Sabemos que es muy habitual usar servicios reconocidos y respetables como Github o Google Drive para exfiltrar información o introducir información en compañías de manera ilegitima (y esto suele suponer un quebradoero de cabeza). Pero prefiero mostraros una manera muy ocurrente de gestionar las llamadas a un C2 que tuvo un atacante. En este reporte de [`The DFIR Report`](https://thedfirreport.com/2025/03/31/fake-zoom-ends-in-blacksuit-ransomware/) un atacante utiliza varias tecnicas de evasión, pero entre ellas oculta a que IP se deben realizar llamadas introduciendo en el nombre de usuario de Steam las IPs para parsearlas y asegurarse de que no tiene caidas y que en caso de tenerlas puede redirigir a nuevos servicios su malware.
-![Desktop View](assets/img/tips/steam.jpg) <br>
+![Desktop View](assets/img/tips/steam.png) <br>
 Tan original como terrorífico para el SOC.
 
 ## 4. Dominios confiables
