@@ -10,7 +10,7 @@ tags: [opsec, malware]     # Los tags deben estar siempre en minúsculas.
 ## 1. Purple Dragon: OPSEC y el motivo de este post
 La diferencia entre que las cosas funcionen y ser un n00b en este campo no suele devenir de la suerte de conocer una técnica, sino ser capaz de hacerla funcionar. No liarla antes de empezar a liarla suele ser fundamental. <br>
 Yo mismo he podido experimentar cuando "esa técnica inflaible" o "eso que había probado mil veces" deja de funcionar donde debería y no se ni como ni porqué. Siendo una sola persona haciendo un ejercicio de Pentesting que esto pase ya es complicado ¿donde he metido la pata? pero en equipo, o una empresa, ¿donde de esta maraña de procesos habremos metido la pata?.... Es una pregunta tremendamente dificil de responder. En muchas ocasiones se puede deber a que no somos conscientes de lo que hacemos, como lo hacemos y de que medida lo tenemos implementado en nuestra operación diaria. Aquí es donde viene el motivo de este post, el OPSEC. El OPSEC es un termino acuñado para referirse a la Seguridad Operacional, lo cual es un termino acuñado por la NSA para hacer referencia, en una explicación un poco vaga, a toda la inteligencia sobre la información crítica que manejamos que puede ser utilizada para atacarnos y hacer que nuestra operación falle. El OPSEC viene a solucionar ese problema tratando de poner foco a la operación y como trabajamos en ella. Pese a que el uso del término sea popular en el campo de la ciberseguridad tiene un hito fundacional recogido por la NSA en su documento [`Purple Dragon: The Origin and Development of the United States OPSEC Program`](https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/cryptologic-histories/purple_dragon.pdf) el cual es público y accesible como documento desclasificado. El documento nos explica cuales fueron los motivos del desarrollo e implantación de OPSEC en las operaciones de los EEUU durante la guerra de Vietnam. <br>
-![Desktop View](assets/img/banner.png) <br>
+![Desktop View](assets/img/tips/opsec1.jpg) <br>
 
 Esta metodología se fundamenta en 5 pasos que deberiamos implementar en nuestras operaciones:
 1. Identificar la información crítica
@@ -34,7 +34,7 @@ Esto no es un puto juego. <br>
 ¿o si? <br>
 Tampoco soy nadie para decirte que es un juego, pero creo que si que tengo algunos truquillos para ayudarte que me ayudaron a mi en el delivery de mis herramientas. Esto es solo una parte del OPSEC que vas a implementar, pero he tenido que pasar por la Guerra de Vietnam para explicartelo, por lo que... Go ahead.
 
-![Desktop View](assets/img/forest.jpg) <br>
+![Desktop View](assets/img/tips/forest.jpg) <br>
 
 
 ## 2. Cadena de suministro e infratructura
@@ -62,7 +62,7 @@ La duda es... ¿de donde saco esa información?... aquí algunos tips:
 ### 3.3 Las excepciones... benditas excepciones...
 Todos sabemos que las compañías grandes tienen un nivel de excepcionado que es inversamente proporcional al volumen de revisiones que se hacen de estas excepciones... Alguien necesitó una vez una herramienta y se excepcionó hasta en el software que se usa para pedir la comida en el comedor (muy lógico), pero... ¿alguien controló esa excepción?. <br>
 Sabemos que es muy habitual usar servicios reconocidos y respetables como Github o Google Drive para exfiltrar información o introducir información en compañías de manera ilegitima (y esto suele suponer un quebradoero de cabeza). Pero prefiero mostraros una manera muy ocurrente de gestionar las llamadas a un C2 que tuvo un atacante. En este reporte de [`The DFIR Report`](https://thedfirreport.com/2025/03/31/fake-zoom-ends-in-blacksuit-ransomware/) un atacante utiliza varias tecnicas de evasión, pero entre ellas oculta a que IP se deben realizar llamadas introduciendo en el nombre de usuario de Steam las IPs para parsearlas y asegurarse de que no tiene caidas y que en caso de tenerlas puede redirigir a nuevos servicios su malware.
-![Desktop View](assets/img/steam.jpg) <br>
+![Desktop View](assets/img/tips/steam.jpg) <br>
 Tan original como terrorífico para el SOC.
 
 ## 4. Dominios confiables
