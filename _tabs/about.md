@@ -39,4 +39,8 @@ Siempre que sea posible, los posts estarán disponibles tanto en inglés como en
   <a href="https://linkedin.com/in/antoniodseri47" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="antoniodseri47" height="30" width="40" /></a>
 </p>
 
-<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support this Content!', '#455d85', 'A0A41BO608');kofiwidget2.draw();</script> 
+<h3 align="left">Support:</h3>
+<p align="left">
+<a href="https://ko-fi.com/c0nfig17"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="c0nfig17" /></a></p><br><br>
+</p>
+
