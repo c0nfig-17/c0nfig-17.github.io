@@ -17,7 +17,7 @@ Por si quereís profundizar hoy vamos a ver técnicas que estan bajo T1557 en la
 ## 2.1 LLMNR Spoofing
 
 ### 2.1.1 Explicación y explotación
-El protocolo LLMNR (Link-Local Multicast Name Resolution) es un protocolo de Micososft creado para resolver nombres de equipos de una misma red cuando no hay un servidor DNS disponible. https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-llmnrp/02b1d227-d7a2-4026-9fd6-27ea5651fe85
+El protocolo LLMNR (Link-Local Multicast Name Resolution) es un protocolo de [**Microsoft**]([https://github.com/lgandx/Responder](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-llmnrp/02b1d227-d7a2-4026-9fd6-27ea5651fe85)): creado para resolver nombres de equipos de una misma red cuando no hay un servidor DNS disponible. 
 Por diseño el protocolo lo que ayuda es a que un equipo, tras consultar al DNS y no encontrar el equipo que encuentra, preguntar a todos los equipos de la red para tratar de encontrarlo. Este protocolo era antes muy utilizado en infrastructuras pequeñas o que ya tienen unos años. Un ordenador legitimo buscará esa información, si decimos que tenemos esa información tratará de autenticarse contra nosotros y ahí podremos obtener el hash de sus credenciales. 
 
 Para tratar de explicar la lógica del ataque he realizado este gráfico (creo que con menos publicidad que los que hay por interenet se entiende bastante mejor). Es básicamente lo que haremos en la mayoría de pasos de este post, por lo que con entenderlo una vez entenderás la mayoría de variantes, lo importante es entender que 1)simplemente confundes al protocolo y 2)el objetivo es que trate de validar contra tí para obtener el hash.
@@ -46,10 +46,10 @@ hashcat –m 5600 <hashfile.txt> <wordlist.txt>
 
 ### 2.1.2 Detección e investigación de explotación:
 Existen varios enfoques para el SOC, principalmente:
-    a.Algunos EDRs y AV (me consta que Sentinel de Defender) tienen capacidad de detección sobre comportamientos anómalos. Si un equipo empieza a dar respuesta a todas las consultas DNS fallidas os saltará alguna alerta.
-    b.Analizar eventos... cuantos eventos de resolución de DNS fallidos hay??? han aumentado?? puedes ver los KO del DNS?? 
-    c.Encontrar el hostname que hace esa respuesta maliciosa os puede ayudar mucho. Normalmente la gente no es tan cuidadosa como para simular que su equipo está en dominio antes de levantar un responder... eso debería daros pistas de que equipo, donde está ubicado y como se está comportando.... El problema es que tienes que ya sabes que ese es el vector. 
-    d. Todas aquellas recomendaciones que ya se recomiendan en la sobre todo aquellas creadas a raíz de eventos de windows.
+1. Algunos EDRs y AV (me consta que Sentinel de Defender) tienen capacidad de detección sobre comportamientos anómalos. Si un equipo empieza a dar respuesta a todas las consultas DNS fallidas os saltará alguna alerta.
+2. Analizar eventos... cuantos eventos de resolución de DNS fallidos hay??? han aumentado?? puedes ver los KO del DNS?? 
+3. Encontrar el hostname que hace esa respuesta maliciosa os puede ayudar mucho. Normalmente la gente no es tan cuidadosa como para simular que su equipo está en dominio antes de levantar un responder... eso debería daros pistas de que equipo, donde está ubicado y como se está comportando.... El problema es que tienes que ya sabes que ese es el vector. 
+4. Todas aquellas recomendaciones que ya se recomiendan en la sobre todo aquellas creadas a raíz de eventos de windows.
 
 ### 2.1.3 Mitigación
 Existen varias vias para deshabilitar este protocolo de raiz:
@@ -69,10 +69,10 @@ set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\services\NetBT\Parameters\
 ```
 
 #### 2.1.3.2 Deshabilitar via GPO
-Puedes realizar uan GPO la cual se aplique en todos los ordenadores que esten bajo tu dominio. Para deshabilitarlo via GPO debes ir a Computer Configuration > Administrative Templates > Network > DNS Client y buscar "turn off multicast name resolution", deberás ponerlo en estado "enabled". Luego como siempre los equipos deberán reiniciarse o deberás usar "gpoupdate /force".
+Puedes realizar uan GPO la cual se aplique en todos los ordenadores que esten bajo tu dominio. Para deshabilitarlo via GPO debes ir a `Computer Configuration > Administrative Templates > Network > DNS Client y buscar "turn off multicast name resolution"` , deberás ponerlo en estado "enabled". Luego como siempre los equipos deberán reiniciarse o deberás usar "gpoupdate /force".
 
 #### 2.1.3.3 Verificar mitigación
-Podemos verificar que la implementación es correcta cuando ejecutamos lo siguiente y obtenemos como respuesta un "0"
+Podemos verificar que la implementación es correcta cuando ejecutamos lo siguiente y obtenemos como respuesta un `0`.
 
 ```powershell
 $(Get-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows NT\DNSClient" -name EnableMulticast).EnableMulticast
@@ -111,7 +111,7 @@ Puedes modificar la siguiente clave de registro
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\Interfaces
 ```
 
-el valor debe ser "2".
+el valor debe ser `2`.
 
 ## 2.3 mDNS Poisoning and Relay
 
@@ -138,7 +138,7 @@ REG ADD "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters" /v " Enable
 ```
 
 #### 2.3.3.3 Regla en el firewall local
-Puedes crear una regla en el firewall de la máquina, ya sea defender o el que sea, que bloquee el tráfico mDNS 
+Puedes crear una regla en el firewall de la máquina, ya sea defender o el que sea, que bloquee el tráfico mDNS.
 
 
 ## 2.4 SMB Relay
@@ -155,17 +155,17 @@ Voy a recomendar en este caso la guia de investigación y analisis que ha public
 ### 2.4.3 Mitigación
 
 Es importante lo primero profundizar en este post de [**Microsoft**](https://learn.microsoft.com/es-es/windows-server/storage/file-server/smb-secure-traffic): el cual se puede reducir en: si no usas SMB deshabilitalo. Es fundamental entender que una mitigación va a partir de entender que el riesgo existirá en muchisimás máquinas, y que por ello los usuarios que sean Administradores de Dominio o Locales deben estar limitados para tareas especificas y no usarse para tareas o máquinas las cuales usen SMB para evitar que sea una forma sencilla de escalada.
-La mitigación general a esto será mediante la habilitación del firmado SMB en todos los dispostivios. Para ello debemos ir al editor de políticas y establecer las siguientes en Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options:
+La mitigación general a esto será mediante la habilitación del firmado SMB en todos los dispostivios. Para ello debemos ir al editor de políticas y establecer las siguientes en `Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options`:
 
 En el lado del cliente:
 
-- Microsoft network client: Digitally sign communications (always)
-- Microsoft network client: Digitally sign communications (if server agrees)
+- `Microsoft network client: Digitally sign communications (always)`
+- `Microsoft network client: Digitally sign communications (if server agrees)`
 
 En el lado del servidor:
 
-- Microsoft network server: Digitally sign communications (always)
-- Microsoft network server: Digitally sign communications (if client agrees)
+- `Microsoft network server: Digitally sign communications (always)`
+- `Microsoft network server: Digitally sign communications (if client agrees)`
 
 > Hay que entender que esto no consiste exclusivamente en el tráfico SMB que tiene la máquian windows, sino también en el que el software del que haces uso y que puede trasladar trazas que sean interceptadas o quizás haciendo un uso indebido de una herramienta mal desarrollada o configurada. Es importante entender que no solo "la solución al problema" soluciona el problema, sino que en ocasiones no detectamos la causa raiz particular, sino que mitigamos la general exclusivamente. 
 {: .prompt-warning }
@@ -176,14 +176,14 @@ Podemos confirmar la mitigación mediante el siguiente comando en CMD:
 reg query HKLM\System\CurrentControlSet\Services\LanManServer\Parameters | findstr /I securitysignature
 ```
 
-Si nos devuelve 0x1 estará resuelto. 
+Si nos devuelve `0x1` estará resuelto. 
 
 Os recomiendo de manera particular este postr de [**WOSHUB**](https://woshub.com/smb-1-0-support-in-windows-server-2012-r2/) en el que se detalla para diferentes versiones de windows como deshabilitar versiones o tomar ciertas accioens relativas a SMB 
-
 
 Para finalizar, más que una aportación una reflexión.
 ![Desktop View](/assets/img/llmnr/image2.jpeg){: width="972" height="589" }
 
+Espero que os sea de ayuda!
 
 ---
 ## Apoya el contenido de ciberseguridad en castellano
