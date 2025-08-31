@@ -21,7 +21,7 @@ El protocolo LLMNR (Link-Local Multicast Name Resolution) es un protocolo de Mic
 Por diseño el protocolo lo que ayuda es a que un equipo, tras consultar al DNS y no encontrar el equipo que encuentra, preguntar a todos los equipos de la red para tratar de encontrarlo. Este protocolo era antes muy utilizado en infrastructuras pequeñas o que ya tienen unos años. Un ordenador legitimo buscará esa información, si decimos que tenemos esa información tratará de autenticarse contra nosotros y ahí podremos obtener el hash de sus credenciales. 
 
 Para tratar de explicar la lógica del ataque he realizado este gráfico (creo que con menos publicidad que los que hay por interenet se entiende bastante mejor). Es básicamente lo que haremos en la mayoría de pasos de este post, por lo que con entenderlo una vez entenderás la mayoría de variantes, lo importante es entender que 1)simplemente confundes al protocolo y 2)el objetivo es que trate de validar contra tí para obtener el hash.
-![Desktop View](/assets/llmnr/image1.png){: width="972" height="589" }
+![Desktop View](/assets/img/llmnr/image1.png){: width="972" height="589" }
 
 Para abusar de este protocolo podemos usar la herramienta [**Responder**](https://github.com/lgandx/Responder):
 Simplemente tendremos que levantar responder en la máquina
@@ -181,7 +181,8 @@ Si nos devuelve 0x1 estará resuelto.
 Os recomiendo de manera particular este postr de [**WOSHUB**](https://woshub.com/smb-1-0-support-in-windows-server-2012-r2/) en el que se detalla para diferentes versiones de windows como deshabilitar versiones o tomar ciertas accioens relativas a SMB 
 
 
-
+Para finalizar, más que una aportación una reflexión.
+![Desktop View](/assets/img/llmnr/image2.jpeg){: width="972" height="589" }
 
 
 ---
