@@ -12,7 +12,7 @@ Pues para explicarlo que mejor que la explicación de la propia [**Microsoft**](
 
 ¿Entendido? En resumen: Una solución para el kaos que hay montado con los administradores locales. ¿No sabes como gestionar ese admin local? Pues a LAPS. Eso está genial, y aunque Microsoft lo traslada como una herramienta que es útil (y suele serlo bastante, sobre todo en escenarios bastante inmaduros en la gestión de identidades) no mitiga todo lo que aveces parece, sobre todo porque parece que al usar LAPS tú administrador local deja de tener impacto en las máquinas en las que se aloja y obviamente no. No hay que transformar una mitigación en una solución inquebrantable (de esas que no existen en ciberseguridad) y usarlo como ese famoso "check del equipo de ciberseguridad".
 
-![Desktop View](/assets/img/laps/laps1.png){: width="700" height="425" }
+![Desktop View](/assets/img/laps/laps1.png){: width="500" height="305" }
 
 Es importante entender varios puntos en LAPS
 1. El esquema de Active Directory agrega dos nuevas propiedades a los objetos de equipo, llamadas ms-Mcs-AdmPwd y ms-Mcs-AdmPwdExpirationTime.
@@ -117,7 +117,7 @@ Podemos tratar de ampliar la duración del permiso como método de persitencia p
 powershell Set-DomainObject -Identity ordenador -Set @{'ms-Mcs-AdmPwdExpirationTime' = '133999999718766666'} -Verbose
 ```
 
-![Desktop View](/assets/img/laps/laps3.jpg){: width="700" height="425" }
+![Desktop View](/assets/img/laps/laps3.jpg){: width="500" height="305" }
 
 
 ### 3.3 Dumping desde Linux
