@@ -40,7 +40,6 @@ Siempre que sea posible, los posts estarán disponibles tanto en inglés como en
 </p>
 
 ### Support:
-<p align="left">
 <a href="https://ko-fi.com/c0nfig17"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="c0nfig17" /></a></p><br><br>
-</p>
+
 
