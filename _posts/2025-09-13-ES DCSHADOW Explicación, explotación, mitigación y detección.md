@@ -43,7 +43,7 @@ Para ello tenemos que Modificar el SPN del ordenador a `GC/$HOSTNAME.$DOMAIN/$DO
 - DRSReplicaDel
 - DRSGetNCCnages
 
-Realmente una vez obtenidos los privilegios como Domain Admin el proceso con [**Mimikatz**]([enlace](https://github.com/gentilkiwi/mimikatz)) es sencillo consiguiendo añadir el usuario al grupo de Domain Admins
+Realmente una vez obtenidos los privilegios como Domain Admin el proceso con [**Mimikatz**](https://github.com/gentilkiwi/mimikatz) es sencillo consiguiendo añadir el usuario al grupo de Domain Admins
 
 ```cmd
 lsadump::dcshadow /object:usuariocomprometido /attribute:primaryGroupID /value:512
