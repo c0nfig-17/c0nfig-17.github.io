@@ -111,7 +111,7 @@ Os dejo una lista de algunos controles que podemos implementar para controlar la
 
 
 
-Quizás puedan serte de ayuda de cara a la detección los siguientes recursos:
+Quizás puedan serte de ayuda de cara a la detección los siguientes recursos: <br>
 [**Kibana DCSYNC**](https://www.elastic.co/docs/reference/security/prebuilt-rules/rules/windows/credential_access_dcsync_replication_rights) <br>
 [**Threath Hunter Playbook**](https://threathunterplaybook.com/library/windows/active_directory_replication.html?highlight=dcsync#directory-replication-services-auditing) <br>
 [**Alteredsecurity sobre DCSYNC**](https://www.alteredsecurity.com/post/a-primer-on-dcsync-attack-and-detection) <br>
