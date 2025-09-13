@@ -1,5 +1,5 @@
 ---
-title: ES DCSYNC: Explicación, explotación, mitigación y detección
+title: ES DCSYNC Explicación, explotación, mitigación y detección
 date: 2025-09-13
 categories: [AD]
 tags: [passwords, ad, domain]     # Los tags deben estar siempre en minúsculas.
@@ -26,7 +26,7 @@ DCSYNC es una técnica que abusa de como se configura esta replicación abusando
 
 ![Desktop View](/assets/img/dcsync/4.png) <br>
 
-Tened en cuenta que podeís encontrar información sobre esta técnica bajo la [**Técnica T1003.006 de Mitre**](https://attack.mitre.org/techniques/T1003/006/) que pertenece a la [**Técnica T1003 de Mitre**](https://attack.mitre.org/techniques/T1003)
+Tened en cuenta que podeís encontrar información sobre esta técnica bajo la [**Técnica T1003.006 de Mitre**](https://attack.mitre.org/techniques/T1003/006/) que pertenece a la [**Técnica T1003 de Mitre**](https://attack.mitre.org/techniques/T1003) .
 
 
 ## 2. Profundizando en DCSYNC
@@ -57,7 +57,7 @@ Una vez comprendemos "que" hace que podamos abusar de DCSYNC podemos comenzar a 
 
 Posiblemente en este punto sabrás que usar [**Bloodhound**](https://bloodhound.specterops.io/get-started/introduction) puede ser un buen aliado para entender los problemas de configuración que pueden existir para escalar.
 
-![Desktop View](/assets/img/dcsync/bloodhound.png) <br>
+![Desktop View](/assets/img/dcsync/bloodhound.png){: width="500" height="305" }
 
 En mi caso prefiro usa ultimamente [**AD Explorer**](https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer) de [**Sysinternals**](https://learn.microsoft.com/en-us/sysinternals/). Fue un truco en el que no había profundizado que otro pentester me comentó y la verdad que es una herramienta firmada por Microsoft muy útil en estos casos ya que el nivel de ruido generado es mucho inferior y se comporta de una manera dificil de discernir si es legitimo o no. Una vía para enumerar puede ser el uso de [**PowerView**](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1) o [**SharpView**](https://github.com/tevora-threat/SharpView)
 
@@ -112,9 +112,9 @@ Os dejo una lista de algunos controles que podemos implementar para controlar la
 
 
 Quizás puedan serte de ayuda de cara a la detección los siguientes recursos:
-[**Kibana DCSYNC**](https://www.elastic.co/docs/reference/security/prebuilt-rules/rules/windows/credential_access_dcsync_replication_rights)
-[**Threath Hunter Playbook**](https://threathunterplaybook.com/library/windows/active_directory_replication.html?highlight=dcsync#directory-replication-services-auditing)
-[**Alteredsecurity sobre DCSYNC**](https://www.alteredsecurity.com/post/a-primer-on-dcsync-attack-and-detection)
+[**Kibana DCSYNC**](https://www.elastic.co/docs/reference/security/prebuilt-rules/rules/windows/credential_access_dcsync_replication_rights) <br>
+[**Threath Hunter Playbook**](https://threathunterplaybook.com/library/windows/active_directory_replication.html?highlight=dcsync#directory-replication-services-auditing) <br>
+[**Alteredsecurity sobre DCSYNC**](https://www.alteredsecurity.com/post/a-primer-on-dcsync-attack-and-detection) <br>
 
 
 
