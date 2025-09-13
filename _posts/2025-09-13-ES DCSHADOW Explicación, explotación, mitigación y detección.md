@@ -1,5 +1,5 @@
 ---
-title: ES DCSHADOW: Explicación, explotación, mitigación y detección
+title: ES DCSHADOW Explicación, explotación, mitigación y detección
 date: 2025-09-13
 categories: [AD]
 tags: [passwords, ad, domain]     # Los tags deben estar siempre en minúsculas.
@@ -21,37 +21,39 @@ La idea principal de esta técnica de persistencia es utilizar una máquina cont
 ## 2. Profundizando en DCSHADOW
 Explicar DCSHADOW aveces es complejo ya que hay que explicar que no es una vulnerabilidad sino un uso de protocolos los cuales están documentados 
 - [**MS-ADTS**](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/d2435927-0999-4c62-8c6d-13ba31a52e1a?redirectedfrom=MSDN)
-- [**MS-DRSR**](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-drsr/f977faaa-673e-4f66-b9bf-48c640241d47?redirectedfrom=MSDN) 
-y para los cuales simplemente debes detener los privilegios adecuados, que demanera habitual son Domain Admin o Enterprise Admin. 
+- [**MS-DRSR**](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-drsr/f977faaa-673e-4f66-b9bf-48c640241d47?redirectedfrom=MSDN) <br>
+Y para los cuales simplemente debes detener los privilegios adecuados, que demanera habitual son Domain Admin o Enterprise Admin. 
 
 Es importante que tengas en cuenta lo siguiente:
 ![Desktop View](/assets/img/dcshadow/feature.jpg) <br>
 
 ## 3. Explotación
-Existen varios requerimientos previos:
+Existen varios requerimientos previos: <br>
 1- Registrar el DC en el dominio
 Para ello tenemos que Modificar el SPN del ordenador a `GC/$HOSTNAME.$DOMAIN/$DOMAIN` y añadir una entrada como `CN=$HOSTNAME,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=$DOMAIN` con los siguientes atributos:
 - `objectClass: server`
 - `dNSHostName: $HOSTNAME.$DOMAIN`
 - `serverReference: CN=$HOSTNAME,CN=Computers,DC=$DOMAIN`
+<br>
+
 2- Tienes que tender capacidad de enviar y recibir tráfico RPC de las llamadas:
-- DRSBind
-- DRSUnbind
-- DRSCrackNames
-- DRSAddEntry
-- DRSReplicaAdd
-- DRSReplicaDel
-- DRSGetNCCnages
+- `DRSBind`
+- `DRSUnbind`
+- `DRSCrackNames`
+- `DRSAddEntry`
+- `DRSReplicaAdd`
+- `DRSReplicaDel`
+- `DRSGetNCCnages`
 
 Realmente una vez obtenidos los privilegios como Domain Admin el proceso con [**Mimikatz**](https://github.com/gentilkiwi/mimikatz) es sencillo consiguiendo añadir el usuario al grupo de Domain Admins
 
-```cmd
+```text
 lsadump::dcshadow /object:usuariocomprometido /attribute:primaryGroupID /value:512
 ```
 
 Posteriormente tienes que abrir otra terminal y forzar un push en entono del Active Directory para que el dominio actualice el dato.
 
-```cmd
+```text
 lsadump::dcshadow /push
 ```
 Con esto generar persistencia es relativamente sencillo simulando el comportamiendo de un DC. 
@@ -69,7 +71,7 @@ Algunos controles que podeís tener son:
 - Las llamadas a las APIs DrsAddEntry, DrsReplicaAdd y GetNCChanges pueden ser consideradas como sospechosas. Ten en cuenta que las replicaciones suelen tardar 15 minutos agrupando diferentes cambios. 
 - Si usas Splunk hay un [**script**](https://gist.github.com/gentilkiwi/dcc132457408cf11ad2061340dcb53c2) para facilitar la detección junto con DCSYNC.
 
-Quizás puedan serte de ayuda de cara a la detección los siguientes recursos:
+Quizás puedan serte de ayuda de cara a la detección los siguientes recursos: <br>
 [**DCShadow.com**](https://www.dcshadow.com/) <br>
 [**Hacking Articles**](https://www.hackingarticles.in/domain-persistence-dc-shadow-attack/) <br>
 [**Hacker Recipes**](https://www.thehacker.recipes/ad/persistence/dcshadow/) <br>
