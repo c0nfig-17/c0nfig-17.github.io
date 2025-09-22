@@ -46,9 +46,9 @@ Dentro de esta técnica existen multitud de servicios y algunos son más fácile
 
 
 
-**Te recomiendo algunos recursos para que puedas profundizar:**
-[**Punk Security**](https://punksecurity.co.uk/dnsreaper/)
-[**Hackerone a guide to subdomain takeovers 2.0**](https://www.hackerone.com/blog/guide-subdomain-takeovers-20)
+**Te recomiendo algunos recursos para que puedas profundizar:** <br>
+[**Punk Security**](https://punksecurity.co.uk/dnsreaper/) <br>
+[**Hackerone a guide to subdomain takeovers 2.0**](https://www.hackerone.com/blog/guide-subdomain-takeovers-20) <br>
 
 
 
