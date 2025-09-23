@@ -5,7 +5,7 @@ date: 2025-09-01
 categories: [Passwords]
 tags: [passwords, ad, domain, local,laps]     # Los tags deben estar siempre en minúsculas.
 image:
-  path: /assets/img/laps/laps1.png
+  path: /assets/img/laps/lapswin.jpg
 ---
 
 ## 1. ¿Que es LAPS?
