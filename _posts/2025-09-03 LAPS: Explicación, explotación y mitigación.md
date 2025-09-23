@@ -1,5 +1,5 @@
 ---
-title: ES LAPS Explicación, explotación y mitigación
+title: LAPS Explicación, explotación y mitigación
 date: 2025-09-01
 categories: [Passwords]
 tags: [passwords, ad, domain, local,laps]     # Los tags deben estar siempre en minúsculas.
