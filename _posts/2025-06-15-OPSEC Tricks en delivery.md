@@ -1,9 +1,11 @@
 ---
 title: OPSEC Tricks en delivery
+description: ¿Que es el OPSEC? ¿Para que lo utilizamos? ¿De que viene? ¿Es una herramienta?
 date: 2025-06-15
 categories: [opsec]
 tags: [opsec, malware]     # Los tags deben estar siempre en minúsculas.
-
+image:
+  path: /assets/img/tips/opsec.jpg
 ---
 
 
