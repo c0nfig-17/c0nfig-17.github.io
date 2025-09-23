@@ -1,9 +1,11 @@
 ---
 title: Spoofing y poisoning dentro de entornos corporativos [LLMNR, mDNS, SMB, y NetBios]
+description: Protocolos deprecados, mal implementados o directamente no gestionados... son la puerta de entrada a comportamientos de atacantes.
 date: 2025-09-01
 categories: [AD]
 tags: [spoofing, ad, domain, smb, netbios, mdns, llmnr]     # Los tags deben estar siempre en minúsculas.
-
+image:
+  path: assets/img/llmnr/poisoning.jpg
 ---
 
 ## 1. ¿Que es eso del spoofing?
