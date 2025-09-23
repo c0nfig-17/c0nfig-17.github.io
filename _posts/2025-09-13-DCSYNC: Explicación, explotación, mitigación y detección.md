@@ -1,9 +1,11 @@
 ---
 title: DCSYNC Explicación, explotación, mitigación y detección
+description: Vamos a profundizar en la técnica de postexplotación DCSync, como la utilizan atacantes y como detectarlos.
 date: 2025-09-13
 categories: [AD]
 tags: [passwords, ad, domain]     # Los tags deben estar siempre en minúsculas.
-
+image:
+  path: /assets/img/dcsync/dcsynclogo.jpeg
 ---
 
 ## 1. ¿Que es DCSYNC?
