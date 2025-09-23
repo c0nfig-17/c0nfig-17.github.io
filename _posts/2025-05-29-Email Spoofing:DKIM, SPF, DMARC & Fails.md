@@ -1,5 +1,5 @@
 ---
-title: Email Spoofing: DKIM, SPF, DMARC & Fails
+title: Email Spoofing:DKIM, SPF, DMARC & Fails
 description: ¿Que fallos de configuración aprovechamos para mejorar los ataques de phishing? ¿como mejorar la detección?
 date: 2025-05-29
 categories: [Email]
