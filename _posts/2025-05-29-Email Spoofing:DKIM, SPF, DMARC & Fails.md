@@ -1,9 +1,11 @@
 ---
-title: Email Spoofing:DKIM, SPF, DMARC & Fails
+title: Email Spoofing: DKIM, SPF, DMARC & Fails
+description: ¿Que fallos de configuración aprovechamos para mejorar los ataques de phishing? ¿como mejorar la detección? Eso trataremos en el post
 date: 2025-05-29
 categories: [Email]
 tags: [spoofing, email, bypass]     # Los tags deben estar siempre en minúsculas.
-
+image:
+  path: /assets/img/email_spoofing/phishing.jpg
 ---
 
 ## 1. ¿Basics?
