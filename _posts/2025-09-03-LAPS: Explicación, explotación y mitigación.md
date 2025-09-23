@@ -1,9 +1,10 @@
 ---
 title: LAPS Explicación, explotación y mitigación
+description: Vamos a tratar de explotar fallos de configuración en la solución LAPS de Microsoft
 date: 2025-09-01
 categories: [Passwords]
 tags: [passwords, ad, domain, local,laps]     # Los tags deben estar siempre en minúsculas.
-
+image: path: /assets/img/laps/laps1.png
 ---
 
 ## 1. ¿Que es LAPS?
