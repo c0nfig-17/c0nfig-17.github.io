@@ -1,9 +1,11 @@
 ---
 title: Subdomain takeover
+description: ¿Que es exactamente un Subdomain Takeover? ¿Donde se origina?
 date: 2025-09-23
 categories: [domain]
 tags: [domain, subdomain, takeover]     # Los tags deben estar siempre en minúsculas.
-
+image:
+  path: /assets/img/subdomain/subdomain.png
 ---
 
 ## 1. Teoría sobre Subdomain Takeover
