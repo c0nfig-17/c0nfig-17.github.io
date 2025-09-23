@@ -1,5 +1,5 @@
 ---
-title: ES DCSYNC Explicación, explotación, mitigación y detección
+title: DCSYNC Explicación, explotación, mitigación y detección
 date: 2025-09-13
 categories: [AD]
 tags: [passwords, ad, domain]     # Los tags deben estar siempre en minúsculas.
