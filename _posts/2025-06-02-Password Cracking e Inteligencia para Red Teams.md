@@ -1,9 +1,11 @@
 ---
 title: Password Cracking e Inteligencia para Red Teams
+description: ¿Como hacer un diccionario personalizado? ¿Que patrones debemos usar? ¿Que patrones debemos hacer entender a los usuarios que no deben usar?
 date: 2025-06-02
 categories: [Passwords]
 tags: [passwords, hashes]     # Los tags deben estar siempre en minúsculas.
-
+image:
+  path: /assets/img/password_cracking/cracking.png
 ---
 
 
