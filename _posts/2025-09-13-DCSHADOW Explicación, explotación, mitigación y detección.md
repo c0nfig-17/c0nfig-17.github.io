@@ -1,9 +1,11 @@
 ---
 title: DCSHADOW Explicación, explotación, mitigación y detección
+description: Vamos a profundizar en la técnica DCSHADOW y como realizar detcción sobre la misma en entornos Active Directory
 date: 2025-09-13
 categories: [AD]
 tags: [passwords, ad, domain]     # Los tags deben estar siempre en minúsculas.
-
+image:
+  path: /assets/img/dcshadow/shadow.jpg
 ---
 
 ## 1. ¿Que es DCSHADOW?
