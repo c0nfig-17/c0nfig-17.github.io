@@ -1,6 +1,6 @@
 ---
 title: LAPS Explicación, explotación y mitigación
-description: Vamos a tratar de explotar fallos de configuración en la solución LAPS de Microsoft
+description: Vamos a profundizar en la explotación de fallos de configuración en LAPS de Microsoft.
 date: 2025-09-01
 categories: [Passwords]
 tags: [passwords, ad, domain, local,laps]     # Los tags deben estar siempre en minúsculas.
