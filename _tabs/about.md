@@ -4,13 +4,14 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-### Investigador en Ciberseguridad & Hacker Ético
 
-Soy investigador en ciberseguridad y profesional de seguridad ofensiva, con pasión por entender cómo se rompen los sistemas y cómo defenderlos mejor. Me especializo en técnicas ofensivas, análisis de vulnerabilidades, red teaming y simulación de adversarios.
 
-Aquí comparto conocimientos, herramientas, write-ups y experimentos de mi camino en el mundo de la seguridad informática. Todo con fines educativos y éticos.
+Mi nombre es Antonio, aunque todo el mundo me llama Andi. Me gusta investigar sobre ciberseguridad y trabajo como Responsable de Seguridad Ofensiva. Tengo experiencia y formación en el campo y trato de organizarla mediante este blog para ayudar a otros compañeros como me gustaría que hiciesen conmigo. Me especializo en técnicas ofensivas, análisis de vulnerabilidades, red teaming y simulación de adversarios.
 
-Siempre que sea posible, los posts estarán disponibles tanto en inglés como en castellano para facilitar el acceso a personas nuevas en el área.
+Si quieres contactar conmigo lo puedes hacer mediante [**linkedin**](https://www.linkedin.com/in/antoniodseri47/) . <br>
+
+> No me hago responsable de cualquier uso malintencionado o equivocado del contenido expuesto o cualquiera de sus referencias.
+{: .prompt-danger }
 
 ---
 
