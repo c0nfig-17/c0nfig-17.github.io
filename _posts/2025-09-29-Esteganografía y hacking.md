@@ -5,7 +5,7 @@ date: 2025-09-29
 categories: [evasion]
 tags: [evasion, esteganografía, ofuscación, criptografía]     # Los tags deben estar siempre en minúsculas.
 image:
-  path: /assets/img/estego/stego4.png
+  path: /assets/img/estego/1.png
 ---
 
 ## 1. ¿Que es Esteganografía?
