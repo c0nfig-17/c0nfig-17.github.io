@@ -59,41 +59,41 @@ Hace nada la gente de [**MaldevAcademy**](https://maldevacademy.com/) subió el 
 **Te recomiendo algunos recursos para que puedas profundizar:**
 
 **Esteganografía en imágenes digitales:** <br>
-[**107 aplicaciones**](http://www.jjtc.com/Steganography/tools.html)
+[**107 aplicaciones**](https://www.jjtc.com/Steganography/tools.html)
 [**Digital invisible ink toolkit (BMP, JAVA, RS-attack, tutoriales)**](http://diit.sourceforge.net/)
-[**Steghide**](http://steghide.sourceforge.net/)
+[**Steghide**](https://steghide.sourceforge.net/)
 [**OpenStego**](https://www.openstego.com/)
 [**OpenPuff**](https://embeddedsw.net/OpenPuff_Steganography_Home.html)
-[**Steg**](http://steg.drupalgardens.com/)
-[**PQ**](http://dde.binghamton.edu/download/pq/)
-[**YASS**](http://www.ws.binghamton.edu/fridrich/Research/yass_attack.pdf)
+[**Steg**](https://steg.drupalgardens.com/)
+[**PQ**](https://dde.binghamton.edu/download/pq/)
+[**YASS**](https://www.ws.binghamton.edu/fridrich/Research/yass_attack.pdf)
 [**HxD, editor hexadecimal freeware**](https://mh-nexus.de/en/hxd/)
 <br>
 
 **Esteganografía en audio digital:** <br>
 [**StegoWav**](https://packetstormsecurity.com/files/21655/stegowav.zip.html)
-[**DeepSound**](http://jpinsoft.net/DeepSound/)
+[**DeepSound**](https://jpinsoft.net/DeepSound/)
 [**MP3Stego**](https://www.petitcolas.net/steganography/mp3stego/)
 [**Enscribe**](https://www.coppercloudmusic.com/enscribe/)
-[**Hide4PGP**](http://www.heinz-repp.onlinehome.de/Hide4PGP.htm)
+[**Hide4PGP**](https://www.heinz-repp.onlinehome.de/Hide4PGP.htm)
 <br>
 
 **Esteganografía en vídeo digital:** <br>
-[**MSU StegoVideo**](http://compression.ru/video/stego_video/index_en.html)
+[**MSU StegoVideo**](https://compression.ru/video/stego_video/index_en.html)
 <br>
 
 **Ocultación mediante técnica EoF:** <br>
-[**Masker**](http://softpuls.weebly.com/)
-[**StegoStick**](http://stegostick.sourceforge.net)
-[**BDV DataHider**](http://www.bdvnotepad.com/products/bdv-datahider/)
+[**Masker**](https://softpuls.weebly.com/)
+[**StegoStick**](https://stegostick.sourceforge.net)
+[**BDV DataHider**](https://www.bdvnotepad.com/products/bdv-datahider/)
 [**Max File Encryption**](https://max-file-encryption.informer.com/)
-[**OurSecret**](http://www.securekit.net/oursecret.html)
+[**OurSecret**](https://www.securekit.net/oursecret.html)
 [**OmniHide Pro**](https://omnihide.com/)
 <br>
 
 **Esteganografía en SSOO, archivos y formatos de archivos:** <br>
-[**S-Tools (módulo FDD)**](http://www.ljudmila.org/matej/privacy/kripto/stegodl.html)
-[**bmap**](http://dl.packetstormsecurity.net/linux/security/bmap-1.0.17.tar.gz)
+[**S-Tools (módulo FDD)**](https://www.ljudmila.org/matej/privacy/kripto/stegodl.html)
+[**bmap**](https://dl.packetstormsecurity.net/linux/security/bmap-1.0.17.tar.gz)
 [**ComputerSecurityStudent - lesson1**](https://www.computersecuritystudent.com/FORENSICS/HIDING/lesson1/index.html)
 [**StegFS**](https://github.com/albinoloverats/stegfs)
 [**Truecrypt (hidden-volume doc)**](https://www.truecrypt71a.com/documentation/plausible-deniability/hidden-volume/)
@@ -101,7 +101,7 @@ Hace nada la gente de [**MaldevAcademy**](https://maldevacademy.com/) subió el 
 [**LADS**](https://www.aldeid.com/wiki/LADS)
 [**Hydan**](https://www.autistici.org/crypto/index.php/remository/Steganography/linux/hydan-0.13-(linux)/)
 [**steg86**](https://crates.io/crates/steg86)
-[**wbStego4**](http://www.bailer.at/wbstego/pr_4ix0.htm)
+[**wbStego4**](https://www.bailer.at/wbstego/pr_4ix0.htm)
 [**InvisibleSecrets (pago)**](https://www.east-tec.com/invisiblesecrets/steganography-software/)
 [**HTML-NINJA**](https://github.com/ephreet/html-ninja)
 [**Deogol**](https://hord.ca/projects/deogol/intro.html)
@@ -118,8 +118,8 @@ Hace nada la gente de [**MaldevAcademy**](https://maldevacademy.com/) subió el 
 <br>
 
 **Esteganografía lingüística:** <br>
-[**ASCII**](http://pictureworthsthousandwords.appspot.com/)
-[**Stelin**](http://stelin.sourceforge.net/)
+[**ASCII**](https://pictureworthsthousandwords.appspot.com/)
+[**Stelin**](https://stelin.sourceforge.net/)
 [**stegUnicode**](https://github.com/mindcrypt/stegUnicode)
 [**spam mimic**](https://www.spammimic.com/)
 [**jano**](https://github.com/mindcrypt/jano)
