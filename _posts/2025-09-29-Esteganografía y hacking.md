@@ -60,7 +60,7 @@ Hace nada la gente de [**MaldevAcademy**](https://maldevacademy.com/) subió el 
 
 **Esteganografía en imágenes digitales:** <br>
 [**107 aplicaciones**](https://www.jjtc.com/Steganography/tools.html)
-[**Digital invisible ink toolkit (BMP, JAVA, RS-attack, tutoriales)**](http://diit.sourceforge.net/)
+[**Digital invisible ink toolkit (BMP, JAVA, RS-attack, tutoriales)**](https://diit.sourceforge.net/)
 [**Steghide**](https://steghide.sourceforge.net/)
 [**OpenStego**](https://www.openstego.com/)
 [**OpenPuff**](https://embeddedsw.net/OpenPuff_Steganography_Home.html)
