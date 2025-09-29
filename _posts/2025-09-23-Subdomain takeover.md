@@ -73,12 +73,11 @@ Si esta publicación te ha sido útil y quieres apoyar mi trabajo para que conti
 ![Desktop View](assets/img/Nordvpn/logonordpass.png){: width="200"}
 
 
-<div style="display: flex; align-items: center; gap: 10px;">
-  <img src="https://nordvpn.com/wp-content/themes/nordvpn/assets/img/logos/nordvpn-logo.svg" 
-       alt="NordVPN" height="40">
-  <img src="https://nordpass.com/wp-content/themes/nordpass/assets/img/logos/nordpass-logo.svg" 
-       alt="NordPass" height="40">
+<div style="display:flex; align-items:center; gap:12px; flex-wrap:nowrap;">
+  <img src="{{ '/assets/img/Nordvpn/logonordvpn.png'  | relative_url }}" alt="NordVPN"  style="height:40px;">
+  <img src="{{ '/assets/img/Nordvpn/logonordpass.png' | relative_url }}" alt="NordPass" style="height:40px;">
 </div>
+
 
 
 
