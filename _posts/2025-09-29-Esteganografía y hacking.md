@@ -154,6 +154,7 @@ Si esta publicación te ha sido útil y quieres apoyar mi trabajo para que conti
 ![Desktop View](/assets/img/Nordvpn/logonordvpn.png){: width="250"}
 
 ![Desktop View](/assets/img/Nordvpn/logonordpass.png){: width="200"}
+
 ---
 
 ¡Gracias por tu apoyo! 🙏
