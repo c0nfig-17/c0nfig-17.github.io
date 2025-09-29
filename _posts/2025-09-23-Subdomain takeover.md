@@ -72,6 +72,16 @@ Si esta publicación te ha sido útil y quieres apoyar mi trabajo para que conti
 ![Desktop View](/assets/img/Nordvpn/logonordvpn.png){: width="250"}
 ![Desktop View](assets/img/Nordvpn/logonordpass.png){: width="200"}
 
+
+<div style="display: flex; align-items: center; gap: 10px;">
+  <img src="https://nordvpn.com/wp-content/themes/nordvpn/assets/img/logos/nordvpn-logo.svg" 
+       alt="NordVPN" height="40">
+  <img src="https://nordpass.com/wp-content/themes/nordpass/assets/img/logos/nordpass-logo.svg" 
+       alt="NordPass" height="40">
+</div>
+
+
+
 ---
 
 ¡Gracias por tu apoyo! 🙏
