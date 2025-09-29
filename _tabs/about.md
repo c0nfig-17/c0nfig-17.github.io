@@ -27,8 +27,11 @@ Si quieres contactar conmigo lo puedes hacer mediante [**linkedin**](https://www
 Si quieres apoyar este blog y el contenido que voy creando puedes apoyarme compartiendo el contenido, apoyando mediante ko-fi o puedes suscribirte a [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=132246&url_id=902) con un 75% de descuento y 3 meses gratis o a [**NordPass**](https://nordpass.com/special/?utm_medium=affiliate&utm_term&utm_content&utm_campaign=off488&utm_source=aff132246&aff_free) con un 53% de descuento y 3 meses gratis. Todo esto ayuda a que pueda priorizar el ritmo de publicaciones y subir contenido más especializado. Toda ayuda es bienvenida! <br>
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A41BO608)
+
 ![Desktop View](/assets/img/Nordvpn/logonordvpn.png){: width="250"}
+
 ![Desktop View](assets/img/Nordvpn/logonordpass.png){: width="200"}
+
 ![Desktop View](/assets/img/ko-fi.jpg)
 
 
