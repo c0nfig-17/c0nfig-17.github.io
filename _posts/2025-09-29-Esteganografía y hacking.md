@@ -59,23 +59,23 @@ Hace nada la gente de [**MaldevAcademy**](https://maldevacademy.com/) subió el 
 **Te recomiendo algunos recursos para que puedas profundizar:**
 
 **Esteganografía en imágenes digitales:** <br>
-[**107 aplicaciones**](https://www.jjtc.com/Steganography/tools.html)
-[**Digital invisible ink toolkit (BMP, JAVA, RS-attack, tutoriales)**](https://diit.sourceforge.net/)
-[**Steghide**](https://steghide.sourceforge.net/)
-[**OpenStego**](https://www.openstego.com/)
-[**OpenPuff**](https://embeddedsw.net/OpenPuff_Steganography_Home.html)
-[**Steg**](https://steg.drupalgardens.com/)
-[**PQ**](https://dde.binghamton.edu/download/pq/)
-[**YASS**](https://www.ws.binghamton.edu/fridrich/Research/yass_attack.pdf)
-[**HxD, editor hexadecimal freeware**](https://mh-nexus.de/en/hxd/)
+[**107 aplicaciones**](https://www.jjtc.com/Steganography/tools.html) <br>
+[**Digital invisible ink toolkit (BMP, JAVA, RS-attack, tutoriales)**](https://diit.sourceforge.net/) <br>
+[**Steghide**](https://steghide.sourceforge.net/) <br>
+[**OpenStego**](https://www.openstego.com/) <br>
+[**OpenPuff**](https://embeddedsw.net/OpenPuff_Steganography_Home.html) <br>
+[**Steg**](https://steg.drupalgardens.com/) <br>
+[**PQ**](https://dde.binghamton.edu/download/pq/) <br>
+[**YASS**](https://www.ws.binghamton.edu/fridrich/Research/yass_attack.pdf) <br>
+[**HxD, editor hexadecimal freeware**](https://mh-nexus.de/en/hxd/) <br>
 <br>
 
 **Esteganografía en audio digital:** <br>
-[**StegoWav**](https://packetstormsecurity.com/files/21655/stegowav.zip.html)
-[**DeepSound**](https://jpinsoft.net/DeepSound/)
-[**MP3Stego**](https://www.petitcolas.net/steganography/mp3stego/)
-[**Enscribe**](https://www.coppercloudmusic.com/enscribe/)
-[**Hide4PGP**](https://www.heinz-repp.onlinehome.de/Hide4PGP.htm)
+[**StegoWav**](https://packetstormsecurity.com/files/21655/stegowav.zip.html) <br>
+[**DeepSound**](https://jpinsoft.net/DeepSound/) <br>
+[**MP3Stego**](https://www.petitcolas.net/steganography/mp3stego/) <br>
+[**Enscribe**](https://www.coppercloudmusic.com/enscribe/) <br>
+[**Hide4PGP**](https://www.heinz-repp.onlinehome.de/Hide4PGP.htm) <br>
 <br>
 
 **Esteganografía en vídeo digital:** <br>
@@ -83,55 +83,55 @@ Hace nada la gente de [**MaldevAcademy**](https://maldevacademy.com/) subió el 
 <br>
 
 **Ocultación mediante técnica EoF:** <br>
-[**Masker**](https://softpuls.weebly.com/)
-[**StegoStick**](https://stegostick.sourceforge.net)
-[**BDV DataHider**](https://www.bdvnotepad.com/products/bdv-datahider/)
-[**Max File Encryption**](https://max-file-encryption.informer.com/)
-[**OurSecret**](https://www.securekit.net/oursecret.html)
-[**OmniHide Pro**](https://omnihide.com/)
+[**Masker**](https://softpuls.weebly.com/) <br>
+[**StegoStick**](https://stegostick.sourceforge.net) <br>
+[**BDV DataHider**](https://www.bdvnotepad.com/products/bdv-datahider/) <br>
+[**Max File Encryption**](https://max-file-encryption.informer.com/) <br>
+[**OurSecret**](https://www.securekit.net/oursecret.html) <br>
+[**OmniHide Pro**](https://omnihide.com/) <br>
 <br>
 
 **Esteganografía en SSOO, archivos y formatos de archivos:** <br>
-[**S-Tools (módulo FDD)**](https://www.ljudmila.org/matej/privacy/kripto/stegodl.html)
-[**bmap**](https://dl.packetstormsecurity.net/linux/security/bmap-1.0.17.tar.gz)
-[**ComputerSecurityStudent - lesson1**](https://www.computersecuritystudent.com/FORENSICS/HIDING/lesson1/index.html)
-[**StegFS**](https://github.com/albinoloverats/stegfs)
-[**Truecrypt (hidden-volume doc)**](https://www.truecrypt71a.com/documentation/plausible-deniability/hidden-volume/)
-[**VeraCrypt (Hidden Operating System)**](https://www.veracrypt.fr/en/VeraCrypt%20Hidden%20Operating%20System.html)
-[**LADS**](https://www.aldeid.com/wiki/LADS)
-[**Hydan**](https://www.autistici.org/crypto/index.php/remository/Steganography/linux/hydan-0.13-(linux)/)
-[**steg86**](https://crates.io/crates/steg86)
-[**wbStego4**](https://www.bailer.at/wbstego/pr_4ix0.htm)
-[**InvisibleSecrets (pago)**](https://www.east-tec.com/invisiblesecrets/steganography-software/)
-[**HTML-NINJA**](https://github.com/ephreet/html-ninja)
-[**Deogol**](https://hord.ca/projects/deogol/intro.html)
+[**S-Tools (módulo FDD)**](https://www.ljudmila.org/matej/privacy/kripto/stegodl.html) <br>
+[**bmap**](https://dl.packetstormsecurity.net/linux/security/bmap-1.0.17.tar.gz) <br>
+[**ComputerSecurityStudent - lesson1**](https://www.computersecuritystudent.com/FORENSICS/HIDING/lesson1/index.html) <br>
+[**StegFS**](https://github.com/albinoloverats/stegfs) <br>
+[**Truecrypt (hidden-volume doc)**](https://www.truecrypt71a.com/documentation/plausible-deniability/hidden-volume/) <br>
+[**VeraCrypt (Hidden Operating System)**](https://www.veracrypt.fr/en/VeraCrypt%20Hidden%20Operating%20System.html) <br>
+[**LADS**](https://www.aldeid.com/wiki/LADS) <br>
+[**Hydan**](https://www.autistici.org/crypto/index.php/remository/Steganography/linux/hydan-0.13-(linux)/) <br>
+[**steg86**](https://crates.io/crates/steg86) <br>
+[**wbStego4**](https://www.bailer.at/wbstego/pr_4ix0.htm) <br>
+[**InvisibleSecrets (pago)**](https://www.east-tec.com/invisiblesecrets/steganography-software/) <br>
+[**HTML-NINJA**](https://github.com/ephreet/html-ninja) <br>
+[**Deogol**](https://hord.ca/projects/deogol/intro.html) <br>
 <br>
 
 **Esteganografía en redes:** <br>
-[**StegTunnel**](https://sourceforge.net/projects/steg-tunnel/)
-[**Covert_TCP**](https://dunnesec.wordpress.com/2014/12/10/covert_tcp-file-transfer-for-linux/)
-[**ICMP (using ICMP to deliver shellcode)**](https://blog.romanrii.com/using-icmp-to-deliver-shellcode)
-[**IPv6teal**](https://github.com/christophetd/IPv6teal)
-[**dnssteganography**](https://github.com/adamcritchley/dnssteganography)
-[**Mística**](https://github.com/IncideDigital/Mistica)
-[**CloakifyFactory (Cloakify-Powershell)**](https://github.com/dumpsterfirevip/Cloakify-Powershell)
+[**StegTunnel**](https://sourceforge.net/projects/steg-tunnel/) <br>
+[**Covert_TCP**](https://dunnesec.wordpress.com/2014/12/10/covert_tcp-file-transfer-for-linux/) <br>
+[**ICMP (using ICMP to deliver shellcode)**](https://blog.romanrii.com/using-icmp-to-deliver-shellcode) <br>
+[**IPv6teal**](https://github.com/christophetd/IPv6teal) <br>
+[**dnssteganography**](https://github.com/adamcritchley/dnssteganography) <br>
+[**Mística**](https://github.com/IncideDigital/Mistica) <br>
+[**CloakifyFactory (Cloakify-Powershell)**](https://github.com/dumpsterfirevip/Cloakify-Powershell) <br>
 <br>
 
 **Esteganografía lingüística:** <br>
-[**ASCII**](https://pictureworthsthousandwords.appspot.com/)
-[**Stelin**](https://stelin.sourceforge.net/)
-[**stegUnicode**](https://github.com/mindcrypt/stegUnicode)
-[**spam mimic**](https://www.spammimic.com/)
-[**jano**](https://github.com/mindcrypt/jano)
+[**ASCII**](https://pictureworthsthousandwords.appspot.com/) <br>
+[**Stelin**](https://stelin.sourceforge.net/) <br>
+[**stegUnicode**](https://github.com/mindcrypt/stegUnicode) <br>
+[**spam mimic**](https://www.spammimic.com/) <br>
+[**jano**](https://github.com/mindcrypt/jano) <br>
 [**Esteganografía lingüística y canales encubiertos - libro (PDF)**](https://github.com/mindcrypt/libros/blob/master/Esteganograf%C3%ADa%20ling%C3%BC%C3%ADstica%20y%20canales%20encubiertos%20-%20libro.pdf)
 <br>
 
 **Esteganografía en Internet y RRSS:** <br>
-[**Powerglot**](https://github.com/mindcrypt/powerglot)
-[**Hackaday - Shakespeare in a zip...**](https://hackaday.com/2018/11/07/shakespeare-in-a-zip-in-a-rar-hidden-in-an-image-on-twitter/)
-[**Stegpage**](https://sourceforge.net/projects/stegpage/)
-[**CameraShy**](https://sourceforge.net/projects/camerashy/)
-[**covertchannels-steganography (GitHub)**](https://github.com/mindcrypt/covertchannels-steganography)
+[**Powerglot**](https://github.com/mindcrypt/powerglot) <br>
+[**Hackaday - Shakespeare in a zip...**](https://hackaday.com/2018/11/07/shakespeare-in-a-zip-in-a-rar-hidden-in-an-image-on-twitter/) <br>
+[**Stegpage**](https://sourceforge.net/projects/stegpage/) <br>
+[**CameraShy**](https://sourceforge.net/projects/camerashy/) <br>
+[**covertchannels-steganography (GitHub)**](https://github.com/mindcrypt/covertchannels-steganography) <br>
 <br>
 
 
