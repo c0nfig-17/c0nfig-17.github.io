@@ -73,11 +73,8 @@ Si esta publicación te ha sido útil y quieres apoyar mi trabajo para que conti
 ![Desktop View](assets/img/Nordvpn/logonordpass.png){: width="200"}
 
 
-<div style="display:flex; align-items:center; gap:12px; flex-wrap:nowrap;">
-  <img src="{{ '/assets/img/Nordvpn/logonordvpn.png'  | relative_url }}" alt="NordVPN"  style="height:40px;">
-  <img src="{{ '/assets/img/Nordvpn/logonordpass.png' | relative_url }}" alt="NordPass" style="height:40px;">
-</div>
-
+![Desktop View]({{ '/assets/logos/nordvpn.svg'  | relative_url }}){:height="40"}
+![Desktop View]({{ '/assets/logos/nordpass.svg' | relative_url }}){:height="40"}
 
 
 
