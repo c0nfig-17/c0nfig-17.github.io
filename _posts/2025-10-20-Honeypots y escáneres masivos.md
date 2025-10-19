@@ -83,7 +83,6 @@ El honeypot te ayuda a obtener datos magro, lo suyo cuando tengas datos suficien
 
 Tienes herramientas de sobra para investigar. Como curiosidad cuando presenté esto en una clase dimos con un software de una empresa africana de distribución de petróleo. Una empresa aparentemente legitima que se dedica a enviar masivamente tráfico y explotar algún que otro CVE, por lo que era evidente que les habian comprometido. 
 
-
 ## 6. ¿Usos ofensivos?
 La investigación siempre ayuda para luego explotar cosas, no descartes esto por estar enfocado en otro ala. Entiende los datos que se muestran, porque estos actores funcionan así, que buscan, que explotan, de que manera lo hacen.... Muchas veces tratar de reproducir comportamientos maliciosos abstraidos del comportamiento y centrados en simplemente resolver problemas como si de un CTF se tratase quita mucha de la creatividad que aporta el campo. Si estás leyendo esto y no te estás planteando en levantar un honeypot para llevarte el exploit de alguien pa ti y entenderlo... es evidente que puedes hacer muchas cosas con algo así si le echas tiempo y ganas, esta gente no está escaneando masivamente servicios SSH en internet por casualidad. <br>
 
