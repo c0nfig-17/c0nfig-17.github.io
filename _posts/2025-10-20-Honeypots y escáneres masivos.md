@@ -34,9 +34,7 @@ Ya lo he montado un par de veces y en todas he tenido problemas. Esta vez no me 
 Para instalarlo es super sencillo y aparece muy detallado en el repo. Simplemente sigue las instrucciones del repro
 
 ````bash
-```
 env bash -c "$(curl -sL https://github.com/telekom-security/tpotce/raw/master/install.sh)"
-```
 ````
 
 ![Desktop View](/assets/img/honeypots/install.png)
@@ -63,7 +61,7 @@ Luego tendrás una instancia de CyberChef que te podrá ayudar a funcionar. Es e
 ![Desktop View](/assets/img/honeypots/6.png)
 ![Desktop View](/assets/img/honeypots/7.png)
 
-## 4. ¿Que trae T-Pot?
+## 4. Indagando un poco en los datos de T-Pot
 Ya con Kibana podemos sentarnos a analizar cada uno de los servicios que tenemos expuestos. Tenemos muchisimos Honeypots y logicamente dependiendo de los scaneres y el tiempo tendremos resultados diferentes. Podemos sacar mucha información pero tened en cuenta que dejarle tiempo para que lso escaneres masivos que se lanzan en momentos puntuales toquen y podais sacar esa info puede ser interesante. Por ejemplo si alguien se dedica a escanear servicios SSH todos los martes y pones el honeypot un jueves pues bueno, no lo pillarás. Ya depende un poco del uso que le quieras dar al honeypot y que objetivos tienes. Puede ser útil para bloquear escaneres masivos vaya.
 El honeypot de [**SentryPeer**](https://github.com/SentryPeer) es el que más detecciones ha tenido en mi caso.
 
