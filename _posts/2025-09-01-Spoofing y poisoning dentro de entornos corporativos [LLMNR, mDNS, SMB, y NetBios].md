@@ -5,7 +5,7 @@ date: 2025-09-01
 categories: [AD]
 tags: [spoofing, ad, domain, smb, netbios, mdns, llmnr]     # Los tags deben estar siempre en minúsculas.
 image:
-  path: assets/img/llmnr/poisoning.jpg
+  path: /assets/img/llmnr/poisoning.jpg
 ---
 
 ## 1. ¿Que es eso del spoofing?
@@ -205,9 +205,9 @@ Si esta publicación te ha sido útil y quieres apoyar mi trabajo para que conti
    
 ![Desktop View](/assets/img/Nordvpn/logonordvpn.png){: width="250"}
 
-![Desktop View](assets/img/Nordvpn/logonordpass.png){: width="200"}
+![Desktop View](/assets/img/Nordvpn/logonordpass.png){: width="200"}
 
 ---
 
 ¡Gracias por tu apoyo! 🙏
-![Desktop View](assets/img/banner.png) <br>
+![Desktop View](/assets/img/banner.png) <br>
