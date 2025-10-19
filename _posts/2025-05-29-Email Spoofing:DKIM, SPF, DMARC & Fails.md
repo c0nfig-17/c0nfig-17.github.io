@@ -196,5 +196,5 @@ Si esta publicación te ha sido útil y quieres apoyar mi trabajo para que conti
 ---
 
 ¡Gracias por tu apoyo! 🙏
-![Desktop View](assets/img/banner.png) <br>
+![Desktop View](/assets/img/banner.png) <br>
 
