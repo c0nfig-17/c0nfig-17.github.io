@@ -12,15 +12,15 @@ image:
 La idea es bastante sencilla, vamos a aprovecharnos de un problema de gestión y mantenimiento que viene de un mal diseño de muchas herramientas. <br>
 Vamos al principio. Cuando contratamos un dominio podemos poner todos los subdominoos que queramos y cada un apunta a lo que queramos. Es muy común en grandes empresas tener no solo muchos dominios sino también muchos subdominios, por lo que las infrastructuras se hacen dificiles de sostener. De manera general la representación sería algo así, cada subdominio apunta a un servicio diferente.
 
-![Desktop View](assets/img/subdomain/subdomain1.png)
+![Desktop View](/assets/img/subdomain/subdomain1.png)
 
 El problema por el que se origina la posibilidad de realizar un subdomain takeover es el momento en el que uno de los subdominios que tenemos apunta a un servicio el cual ya no está activo. En ese momento tenemos un subdominio (en este caso el subdominio2) el cual sigue apuntando a galletas.github.io. Esto normalmente se da porque quien gestiona el servicio pidió dar de alta un subdominio pero no se acordó o no planificó el que esa redirección debe retirarse.
 
-![Desktop View](assets/img/subdomain/subdomain2.png)
+![Desktop View](/assets/img/subdomain/subdomain2.png)
 
 En este punto es donde surje la vulnerabilidad. El subdominio sigue apuntando a ese CNAME por lo que si consigues colocarte donde esta úbicada la redirección podrás publicar un contenido que use el subdominio que es vulnerable de manera sencilla y sin gran conocimiento técnico. 
 
-![Desktop View](assets/img/subdomain/subdomain3.png)
+![Desktop View](/assets/img/subdomain/subdomain3.png)
 
 
 ## 2. ¿Quien ha originado el problema? ¿como lo gestionamos?
@@ -44,7 +44,7 @@ Para descubrir subdominios que sean vulnerables puedes usar herramientas como [*
 
 Dentro de esta técnica existen multitud de servicios y algunos son más fáciles de vulnerar y otros requieren o del abandono de una cuenta o de un compromiso a esas cuentas. En ese sentido existe un repositorio el cual es [**Can I takeover XYZ?**](https://github.com/EdOverflow/can-i-take-over-xyz) y te podrá guiar un poco. Es verdad que recomiendo asegurarte mucho de que servicio y si existe información en este repo o por otro lado que no haya sido incluido en el repo, ya que la existir miles de servicios y el propio paso del tiempo es dificil en ocasiones encontrar recursos aunque si has entendido el concepto será sencillo de explotar. 
 
-![Desktop View](assets/img/subdomain/lugia.jpg)
+![Desktop View](/assets/img/subdomain/lugia.jpg)
 
 
 
@@ -72,9 +72,9 @@ Si esta publicación te ha sido útil y quieres apoyar mi trabajo para que conti
    
 ![Desktop View](/assets/img/Nordvpn/logonordvpn.png){: width="250"}
 
-![Desktop View](assets/img/Nordvpn/logonordpass.png){: width="200"}
+![Desktop View](/assets/img/Nordvpn/logonordpass.png){: width="200"}
 
 ---
 
 ¡Gracias por tu apoyo! 🙏
-![Desktop View](assets/img/banner.png) <br>
+![Desktop View](/assets/img/banner.png) <br>
