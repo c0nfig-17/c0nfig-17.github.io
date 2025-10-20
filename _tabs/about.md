@@ -28,10 +28,6 @@ Si quieres apoyar este blog y el contenido que voy creando puedes apoyarme compa
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A41BO608)
 
-![Desktop View](/assets/img/Nordvpn/logonordvpn.png){: width="250"}
-
-![Desktop View](/assets/img/Nordvpn/logonordpass.png){: width="200"}
-
 ![Desktop View](/assets/img/ko-fi.jpg)
 
 
