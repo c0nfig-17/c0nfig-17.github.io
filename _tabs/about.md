@@ -30,7 +30,7 @@ Si quieres apoyar este blog y el contenido que voy creando puedes apoyarme compa
 
 ![Desktop View](/assets/img/Nordvpn/logonordvpn.png){: width="250"}
 
-![Desktop View](assets/img/Nordvpn/logonordpass.png){: width="200"}
+![Desktop View](/assets/img/Nordvpn/logonordpass.png){: width="200"}
 
 ![Desktop View](/assets/img/ko-fi.jpg)
 
