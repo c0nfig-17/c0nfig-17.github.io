@@ -1,6 +1,6 @@
 ---
-title: Phishing OPS
-description: POC de un ejercicio de phishing
+title: Phishing OPS para Red Teaming
+description: POC de un ejercicio de phishing para Red Teams
 date: 2025-10-28
 categories: [Email]
 tags: [passwords, email, subdomain, takeover, opsec, evasion]     # Los tags deben estar siempre en minúsculas.
@@ -33,12 +33,13 @@ Vamos a tratar de marcar algunos objetivos con los que trabajaremos durante esta
 ## 3. Software que utilizaremos
 En mi caso me voy a valer de dos proyectos para poder realizar la operación. El primero el [**gophish**](https://getgophish.com/) el cual tiene su [**repositorio oficial en github**](https://github.com/gophish/gophish) aunque yo haré uso del [**repositorio de kgretxky**](https://github.com/kgretzky/gophish) el cual es un fork oficial que añade una serie de implementaciones. El proyecto de gophish pese a no tener todas las actualizaciones que nos gustaría, muchos issues parados.... en general no tener un gran mantenimiento (pese a ser muy buen proyecto) nos va a ayudar. Hay que tener en cuenta que es conocido, es por ello que si estuviesemos haciendo una operación con un OPSEC un poco más trabajado quizás evitar configuraciones y algunas cosas por defecto puede ser de ayuda. <br>
 
-![Desktop View](/assets/img/phishingops/4.svg)
+![Desktop View](/assets/img/phishingops/4.svg){: width="500" height="305" } <br>
+
 Por si os es de ayuda he encontrado este repositorio de bigb0ss llamad [**gogophish**](https://github.com/bigb0sss/gogophish) que os ayuda a desplegar más rápido gophish.
 
 Por otro lado usaremos otro proyecto llamado Evilginx en concreto en su versión gratuita, aunque os dejo su [**web oficial**](https://evilginx.com/) por si os interesa para vuestras operaciones. Nosotros nos valdremos del [**repositorio**](https://github.com/kgretzky/evilginx2) con la versión gratuita creada por [**Kuba Gretzky**](https://x.com/mrgretzky) y os dejo su [**blog**](https://breakdev.org/) por si os interesa. El motivo por el que utilizaba la versión de gophish del repositorio de krebretzky en vez del oficial es que nos ayudará luego a la implementación con evilgynx. <br>
 
-![Desktop View](/assets/img/phishingops/5.png)
+![Desktop View](/assets/img/phishingops/5.png){: width="500" height="305" }
 
 Todo son versiones gratuitas, accesibles, con código abierto... realmente son recursos útiles y sencillos de utilizar. 
 
@@ -57,7 +58,7 @@ Si bien no tiene sentido contar el paso a paso de como realizamos la instalació
 
 - Servicio SMTP: Ten en cuenta que vas a enviar correos, por lo que necesitarás un servidio SMTP el cual se encargue de enviar los correos. Tienes varias opciones, usar algo como [**Postman**](https://www.postman.com/) si quieres montarte tu propio servicio en tu servidor (lo cual os comento luego pero os dará problemas en algunos contextos), usar un servicio externo de SMTP como [**Sendgrid**](https://www.mailersend.com/) el cual vincules a tu Gophish o usar una contraseña para aplicaciones con un correo que creeis como un gmail (os permitirá enviar correos en nombre de ese correo, aunque puede ser más fácil de detectar). Aquí ya para gustos colores.
 
-![Desktop View](/assets/img/phishingops/postman.png)
+![Desktop View](/assets/img/phishingops/postman.png){: width="500" height="305" }
 ![Desktop View](/assets/img/phishingops/sendgrid.png)
 
 Puede que os sea de ayuda para el servicio SMTP usar [**Mailhog**](https://github.com/mailhog/MailHog) para realizar pruebas y ver si lo que habeís instalado funciona. 
