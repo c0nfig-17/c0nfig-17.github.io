@@ -65,7 +65,7 @@ Puede que os sea de ayuda para el servicio SMTP usar [**Mailhog**](https://githu
 ## 5. Perfilado y diseño
 Bueno tenemos que ser conscientes que hay dos fases, la primera es el diseño de un phishing y la siguiente es la elaboración del portal a partir del cual extraeremos las credenciales de las personas a las cuales vamos a tratar de engañar en este ejercicio. Creo que es importante que antes de esto (teniendo en cuenta que parte de esto se trabaja para ejercicios de red team y como apoyo a pentesters) es importante tener en cuenta ¿que narices queremos obtener?. Está genial colgarse la medallita de que has conseguido un usuario y pass... pero ¿has perfilado los objetivos a los cuales quieres comprometer? Es decir, enviar un phishing masivo y chustero lo hace cualquiera.... enviar uno que de verdad sea creible y definiendo los objetivos.... eso ya es otra cosa. <br>
 
-![Desktop View](/assets/img/phishingops/8.png)
+![Desktop View](/assets/img/phishingops/8.jpeg)
 
 Si le has dicho a tu jefe que mañana vas a hacer un phising porque se os está resistiendo encontrar una gatera... si son las 4 de la mañana y no sabes porque ese exploit no funciona cuando lo has tocado ya 5 veces y chatgpt ya te está vacilando.... respira... tu puedes.... duerme y haz el perfilado para el phising. Pero no dispares a todo el mundo que la lias. Te dejo algunas preguntas para que te hagas de cara al perfilado: 
 
@@ -149,7 +149,7 @@ Por si te ayuda tengo una [**lista**](https://github.com/stars/c0nfig-17/lists/p
 
 
 Dicho todo esto, ve preparando recursos de formación para los usuarios si no quieres acabar así.... 
-![Desktop View](/assets/img/phishingops/questions.png)
+![Desktop View](/assets/img/phishingops/questions.jpeg)
 
 ---
 ## Apoya el contenido de ciberseguridad en castellano
