@@ -33,7 +33,7 @@ Vamos a tratar de marcar algunos objetivos con los que trabajaremos durante esta
 ## 3. Software que utilizaremos
 En mi caso me voy a valer de dos proyectos para poder realizar la operación. El primero el [**gophish**](https://getgophish.com/) el cual tiene su [**repositorio oficial en github**](https://github.com/gophish/gophish) aunque yo haré uso del [**repositorio de kgretxky**](https://github.com/kgretzky/gophish) el cual es un fork oficial que añade una serie de implementaciones. El proyecto de gophish pese a no tener todas las actualizaciones que nos gustaría, muchos issues parados.... en general no tener un gran mantenimiento (pese a ser muy buen proyecto) nos va a ayudar. Hay que tener en cuenta que es conocido, es por ello que si estuviesemos haciendo una operación con un OPSEC un poco más trabajado quizás evitar configuraciones y algunas cosas por defecto puede ser de ayuda. <br>
 
-![Desktop View](/assets/img/phishingops/4.svg){: width="500" height="305" } <br>
+![Desktop View](/assets/img/phishingops/4.svg){: width="250" height="150" } <br>
 
 Por si os es de ayuda he encontrado este repositorio de bigb0ss llamad [**gogophish**](https://github.com/bigb0sss/gogophish) que os ayuda a desplegar más rápido gophish.
 
