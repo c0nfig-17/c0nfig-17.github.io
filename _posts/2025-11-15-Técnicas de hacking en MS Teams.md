@@ -60,7 +60,7 @@ Para finalizar creo que es importante recomendar este post de [**mr.d0x**](https
 - [**Guia de seguridad MS Teams**](https://learn.microsoft.com/en-us/microsoftteams/teams-security-guide) <br>
 - [**Políticas Zero Trust en Teams**](https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-identity-device-access-policies-workloads#microsoft-teams-recommendations-for-zero-trust)
 
-![Desktop View](/assets/img/teams/5.jpg)
+![Desktop View](/assets/img/teams/5.jpg){: width="972" height="589" }
 
 ---
 ## Apoya el contenido de ciberseguridad en castellano
