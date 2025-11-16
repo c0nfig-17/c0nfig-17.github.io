@@ -88,7 +88,7 @@ Dentro de settings.json encontrarás cada uno de los perfiles y podrás modifica
             },
 ```
 
-En resumidas cuentas
+En resumidas cuentas <br>
 ![Desktop View](/assets/img/terminal/9.png)
 
 ---
