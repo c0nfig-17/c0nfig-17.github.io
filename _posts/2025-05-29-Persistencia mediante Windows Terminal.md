@@ -5,7 +5,7 @@ date: 2025-11-16
 categories: [Persistencia]
 tags: [domain, persistencia, evasion, local ]     # Los tags deben estar siempre en minúsculas.
 image:
-  path: /assets/img/terminal/teams.png
+  path: /assets/img/terminal/terminal.png
 
 ---
 ## 1. Persistencia y OPSEC. No vayamos tan rápido.
