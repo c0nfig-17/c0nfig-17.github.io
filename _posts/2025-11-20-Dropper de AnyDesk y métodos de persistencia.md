@@ -12,11 +12,11 @@ image:
 
 En muchas ocasiones abstraemos técnicas y actividades de Red Teaming de entornos reales, por ello me gusta estar al día con todos los artículos de [**The DFIR Report**](https://thedfirreport.com/). Revisando un poco me encontré este post llamado [**From IcedID to Dagon Locker Ransomware in 29 Days**](https://thedfirreport.com/2024/04/29/from-icedid-to-dagon-locker-ransomware-in-29-days/#persistence) , en el cual se explican una serie de métodos de persistencia y entre ellos un fichero powershell que ayuda a generar persistencia mediante anydesk. Lo que vamos a realizar en este post es algo similar y mejorar algunos puntos, por lo que vamos a definir objetivos:
 
-1- Generar un dropper Powershell que descargue e instale AnyDesk de manera silenciosa
-2- Consultar un repositorio público que nos ayude a continuar con los pasos
-3- Generar un usuario administrador con los parámetros definidos en el repositorio
-4- Modificaremos mediante el contenido del repositorio un registro de cara a mejorar la persistencia.
-5- Ofuscar el contenido de nuestro dropper.
+1. Generar un dropper Powershell que descargue e instale AnyDesk de manera silenciosa
+2. Consultar un repositorio público que nos ayude a continuar con los pasos
+3. Generar un usuario administrador con los parámetros definidos en el repositorio
+4. Modificaremos mediante el contenido del repositorio un registro de cara a mejorar la persistencia.
+5. Ofuscar el contenido de nuestro dropper.
 
 La idea es trabajar el OPSEC de nuestro pequeño instalador para evitar que la detección no venga del analisis del dropper y evitar que nos detecten el fichero. <br>
 Es importante entender que vamos a partir de un acceso inicial, es decir que o 1)El usuario ha ejecutado nuestro dropper tras un phishing o con una macro o similar o 2)Hemos comprometido una máquina y utilizado el dropper custom para automatizar la persistencia. 
@@ -26,8 +26,8 @@ Es importante entender que vamos a partir de un acceso inicial, es decir que o 1
 
 Si has trabajado en entornos de administración de sistemas sabrás que la administración remota es un quebradero de cabeza de los equipos. ¿Como hacemos para conectarnos a otra oficina? ¿Abrimos y permitimos RDP en todas las máquinas? ¿Contamos con la proactividad del usuario? ¿Que software usamos? ¿Como hacemos todo esto gratis? Dentro de todo esto empiezan a surgir los problemas. Dependiendo de tu entorno tendrás más o menos control de que hay instalado y que puedes instalar, pero dentro de todo pese a que sea el entorno más inmaduro tendrás un AV mínimo que te permita funcionar "algo" más tranquilo (esté o no administrado). Ahora ¿Controlas que no se pueda no solo instalar software sino cierto software? ¿Eres capaz de controlar que nadie se instale un AnyDesk o cualquier otro cliente? En entornos maduros detectar las firmas del software te permitirá que no haya ningún usuario listo (ni nosotros en esta PoC) que se aproveche de un software firmado y bien intencionado. Nosotros hoy nos vamos a aprovechar de dos cosas fundamentalmente. 
 
-1- Anydesk es un programa conocido que no haría sospechar a un usuario si aparece en su escritorio.
-2- Anydesk es un software legitimo, firmado y público el cual no va ser detectado como un virus persé (por lo que limitamos detecciones).
+1. Anydesk es un programa conocido que no haría sospechar a un usuario si aparece en su escritorio.
+2. Anydesk es un software legitimo, firmado y público el cual no va ser detectado como un virus persé (por lo que limitamos detecciones).
 
 > Ten en cuenta que puedes usar cualquier software, hay muchisimo software de gestión remota, simplemente AnyDesk es uno más. Quizás en otro entorno puede venirte bien otra cosa.
 {: .prompt-tip }
@@ -38,11 +38,11 @@ Lo que vamos a hacer en este paso es crear un dropper en powershell que nos perm
 
 Los pasos que queremos que realice nuestro dropper en este momento son los siguientes:
 
-1- Verifica que existe la carpeta C:\ProgramData\AnyDesk y en tal caso se para
-2- Crea la carpeta C:\ProgramData\AnyDesk
-3- Descarga AnyDesk.exe 4- Lo instala en silencio (--silent) y con inicio con Windows.
-5- Establece una contraseña.
-6- Obtiene el ID de AnyDesk.
+1. Verifica que existe la carpeta C:\ProgramData\AnyDesk y en tal caso se para
+2. Crea la carpeta C:\ProgramData\AnyDesk
+3. Descarga AnyDesk.exe 4- Lo instala en silencio (--silent) y con inicio con Windows.
+5. Establece una contraseña.
+6. Obtiene el ID de AnyDesk.
 De manera adicional voy a hacer que el script autoalmacene una copia de su propio contenido en C:\Windows\Tasks la cual es una ruta la cual el propio usuario suele tener capacidad de ejecución de cara a la persistencia posterior.
 
 Puedes acceder a este código en mi repositorio [**dropper anydesk**](https://github.com/c0nfig-17/dropper-anydesk/blob/main/dropper.ps1)
@@ -228,9 +228,9 @@ Como podemos ver se ha generado el usuario en mi máquina como administrador.
 ## 5. Ofuscación y evasión
 
 Como vemos con VirusTotal hemos hecho bien los deberes:
-1- Tenemos un dropper que descarga AnyDesk que es un software legal y firmado
-2- Usamos recomendaciones como las que incluye [**LOTS: Living off Trusted Sites**](https://lots-project.com/) por lo que nos descargamos la parte que puede tener un comportamiento irregular de un sitio reputado
-3- Nuestro script no ha sido ejecutado más que por nosotros, por lo que no hay nadie que lo haya detectado todavía o usado de manera maliciosa, eso hace que los motores de analisis de malware no lo detecten y parezca un simple powershell. 
+1. Tenemos un dropper que descarga AnyDesk que es un software legal y firmado.
+2. Usamos recomendaciones como las que incluye [**LOTS: Living off Trusted Sites**](https://lots-project.com/) por lo que nos descargamos la parte que puede tener un comportamiento irregular de un sitio reputado.
+3. Nuestro script no ha sido ejecutado más que por nosotros, por lo que no hay nadie que lo haya detectado todavía o usado de manera maliciosa, eso hace que los motores de analisis de malware no lo detecten y parezca un simple powershell. 
 
 ![Desktop View](/assets/img/dropper/7.png)
 
