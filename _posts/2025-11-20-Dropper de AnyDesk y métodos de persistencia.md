@@ -304,7 +304,7 @@ Si bien en este punto hemos conseguido ofuscar el contenido y dificultar su lect
 
 ¿Ha estado chulo no? Espero que os haya servido de ayuda. Teneís los 3 scripts que hemos ido viendo en este repositorio [**dropper-anydesk**](https://github.com/c0nfig-17/dropper-anydesk) en el que podeís consultar todo lo que se ha realizado.
 
-![Desktop View](/assets/img/dropper/14.jpeg)
+![Desktop View](/assets/img/dropper/14.jpeg){: width="400" }
 
 
 ---
