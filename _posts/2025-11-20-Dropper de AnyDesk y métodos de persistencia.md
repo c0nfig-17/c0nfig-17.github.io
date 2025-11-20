@@ -21,6 +21,7 @@ En muchas ocasiones abstraemos técnicas y actividades de Red Teaming de entorno
 La idea es trabajar el OPSEC de nuestro pequeño instalador para evitar que la detección no venga del analisis del dropper y evitar que nos detecten el fichero. <br>
 Es importante entender que vamos a partir de un acceso inicial, es decir que o 1)El usuario ha ejecutado nuestro dropper tras un phishing o con una macro o similar o 2)Hemos comprometido una máquina y utilizado el dropper custom para automatizar la persistencia. 
 
+![Desktop View](/assets/img/dropper/0.png)
 
 ## 2. ¿Porqué anydesk? ¿Que queremos hacer realmente?
 
