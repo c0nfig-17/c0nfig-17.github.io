@@ -10,27 +10,27 @@ image:
 ---
 ## 1. ¿Que es Mark of the Web?
 
-En muchas ocasiones descargamos ficheros de internet y "mágicamente" nuestro ordenador detecta que ha sido descargado de internet y nos impide ejecutarlo ¿porque? </br>
+En muchas ocasiones descargamos ficheros de internet y "mágicamente" nuestro ordenador detecta que ha sido descargado de internet y nos impide ejecutarlo ¿porque? <br>
 
 ![Desktop View](/assets/img/motw/1.png)
 
-En Microsoft elaboraron una manera de marcar la procedencia de los ficheros de cara a poder evitar comportamientos maliciosos partiendo de la procedencia del fichero. Para ello lo que se desarrolló es la insercción de un metadato llamado Zone Identifier como parte del [**Alternate Data Stream(ADS)**](https://en.wikipedia.org/wiki/NTFS#Alternate_data_stream_(ADS)) el cual categoriza el archivo de su procedencia en base a 5 posibles categorias: </br>
+En Microsoft elaboraron una manera de marcar la procedencia de los ficheros de cara a poder evitar comportamientos maliciosos partiendo de la procedencia del fichero. Para ello lo que se desarrolló es la insercción de un metadato llamado Zone Identifier como parte del [**Alternate Data Stream(ADS)**](https://en.wikipedia.org/wiki/NTFS#Alternate_data_stream_(ADS)) el cual categoriza el archivo de su procedencia en base a 5 posibles categorias: <br>
 
-0 = My Computer </br>
-1 = Local intranet</br>
-2 = Trusted sites </br>
-3 = Internet </br>
-4 = Restricted sites </br>
+0 = My Computer <br>
+1 = Local intranet<br>
+2 = Trusted sites <br>
+3 = Internet <br>
+4 = Restricted sites <br>
 
-Podeís ver una descripción de cada una de las zonas en este [**enlace de Microsoft**](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537183(v=vs.85)) aunque son clasificaciones bastantes autodescriptivas. </br>
+Podeís ver una descripción de cada una de las zonas en este [**enlace de Microsoft**](https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537183(v=vs.85)) aunque son clasificaciones bastantes autodescriptivas. <br>
 
-Puedes ver en tu propio ordenador en el panel de control el apartado que define luego realmente MotW y añadir sitios confiables. </br>
+Puedes ver en tu propio ordenador en el panel de control el apartado que define luego realmente MotW y añadir sitios confiables. <br>
 ![Desktop View](/assets/img/motw/2.png)
 
 
 ## 2. ¿y mi fichero que?
 
-Bueno vamos a comprobar cual es el estado de un fichero que descarmos de internet, en mi caso un instalador de Notepad++ mediante powershell. </br>
+Bueno vamos a comprobar cual es el estado de un fichero que descarmos de internet, en mi caso un instalador de Notepad++ mediante powershell. <br>
 
 ```text
 PS C:\Users\c0nfig\Downloads> Get-Content -Path .\npp.8.8.8.Installer.x64.exe -Stream Zone.Identifier
@@ -48,7 +48,7 @@ Como puedes ver el identificador de mi instalable es la Zona 3 que es Internet p
 
 
 ## 3. Desbloqueo de ficheros
-En este punto tendremos que ver como desbloquear el fichero, podemos hacerlo de manera sencilla yendo a las propiedades del documento y pulsando en Desbloquear. </br>
+En este punto tendremos que ver como desbloquear el fichero, podemos hacerlo de manera sencilla yendo a las propiedades del documento y pulsando en Desbloquear. <br>
 ![Desktop View](/assets/img/motw/3.png)
 
 Una vez lo haces ese fichero se desbloquea a los controles que ayudarían a identificar el archivo. 
@@ -76,7 +76,7 @@ Puedes hacer packing de tu fichero de manera sencilla para evitar la detección 
 En muchas ocasiones puedes usar .LNK por ejemplo en vez del .exe dado que los formatos son diferentes y podemos evitar los controles de Smart Screen. Te paso un analisis de [**Unit 42 sobre malware usando lnk**](https://unit42.paloaltonetworks.com/lnk-malware/) que vislumbra un poco como usarlo. 
 
 ### 4.4 Evasiones adicionales
-Voy a recomendar dos evasiones explicadas por mr.d0x en su blog en los post [**FileFix - A ClickFix Alternative**](https://mrd0x.com/filefix-clickfix-alternative/) y [**FileFix (Part 2)**](https://mrd0x.com/filefix-part-2/) que proporciona evasiones concretas a MotW que pueden ser interesantes. </br>
+Voy a recomendar dos evasiones explicadas por mr.d0x en su blog en los post [**FileFix - A ClickFix Alternative**](https://mrd0x.com/filefix-clickfix-alternative/) y [**FileFix (Part 2)**](https://mrd0x.com/filefix-part-2/) que proporciona evasiones concretas a MotW que pueden ser interesantes. <br>
 
 ![Desktop View](/assets/img/motw/4.jpg)
 
