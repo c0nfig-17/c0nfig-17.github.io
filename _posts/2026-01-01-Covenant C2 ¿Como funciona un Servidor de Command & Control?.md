@@ -147,42 +147,41 @@ Volvamos a nuestro implante exitoso, como podemos ver existen diferentes caracte
 ![Desktop View](/assets/img/covenantc2/15.png)
 
 Como podemos ver tenemos el proceso que ha sido ejecutado, el nombre de la máquina, su IP, si pertenece a un dominio, quien ha ejecutado el proceso, cuando se ha activado y cuando es la última vez que nuestro Grunt ha dicho "hey! estoy vivo!". Esto último es importante.... vamos a pararnos a explicarlo.... <br>
-Las comunicaciones como hemos dicho están estructuradas, por lo que nuestro Grunt ejecuta acciones con una temporalidad predefinida de cara a dificultar la detección. Imaginemos que conseguimos comprometer una máquina e instalamos un software que no solo aumenta el consumo de recursos sino que encima genera un tráfico llamativo al exterior hacia un sitio que no es común... va a ser fácil de detectar sobre todo si es mucho tráfico. De manera habitual como atacantes tratamos de reproducir comportamientos normales que podrían ser de un usuario normal de cara a dificultar la detección, por lo que si generasemos un proceso nuevo que envia tráfico de manera constante serían fácil de analizar y llamativo. Un ejemplo de utilización maliciosa de un comportamiento que puede estar excepcionado es el que tengo en otro post sobre la generación de un [**Dropper de AnyDesk para persistencia**](https://c0nfig17.com/posts/Dropper-de-AnyDesk-y-m%C3%A9todos-de-persistencia/) . En este caso la lógica que seguimos es, cuanto menos tráfico y menos ruidoso mejor porque estamos en un equipo y comunicandonos hacia fuera. Es por eso que cuando ejecutamos un comando no se ejecuta directamente en la máquina sino que Covenant espera a enviar la tarea el tiempo que hayamos definido y el implante nos enviará la respuesta en el tiempo definido, no es interactivo ni aleatorio. 
+Las comunicaciones como hemos dicho están estructuradas, por lo que nuestro Grunt ejecuta acciones con una temporalidad predefinida de cara a dificultar la detección. Imaginemos que conseguimos comprometer una máquina e instalamos un software que no solo aumenta el consumo de recursos sino que encima genera un tráfico llamativo al exterior hacia un sitio que no es común... va a ser fácil de detectar sobre todo si es mucho tráfico. De manera habitual como atacantes tratamos de reproducir comportamientos normales que podrían ser de un usuario normal de cara a dificultar la detección, por lo que si generasemos un proceso nuevo que envia tráfico de manera constante serían fácil de analizar y llamativo. Un ejemplo de utilización maliciosa de un comportamiento que puede estar excepcionado es el que tengo en otro post sobre la generación de un [**Dropper de AnyDesk para persistencia**](https://c0nfig17.com/posts/Dropper-de-AnyDesk-y-m%C3%A9todos-de-persistencia/) . En este caso la lógica que seguimos es, cuanto menos tráfico y menos ruidoso mejor porque estamos en un equipo y comunicandonos hacia fuera. Es por eso que cuando ejecutamos un comando no se ejecuta directamente en la máquina sino que Covenant espera a enviar la tarea el tiempo que hayamos definido y el implante nos enviará la respuesta en el tiempo definido, no es interactivo ni aleatorio. <br>
 ![Desktop View](/assets/img/covenantc2/16.png)
 
 Pongamonos en el caso en el que comprometemos un equipo y conseguimos establecer nuestro implante.... ¿nos interesa tratar de elevar privilegios y enumerar la máquina ahora mismo? Pues en un CTF o si estamos limitados por tiempos, como suele pasar en los ejercicios de Red Team, pues tocará lanzarse o ver como hacerlo... pero es importante entender que un atacante que haya conseguido un compromiso inicial no realizará acciones posteriores salvo que se vea obligado, y menos acciones sobre el host. Lo principal será mantenerse oculto, por lo que o trata de establecer persistencias sencillas o simplemente establecerá un sleep a su implante de 1 mes y esperará pacientemente. Aquí ya depende del tipo de actor que estás simulando, lo bien que quieras hacer las cosas y lo dificil que se lo queiras poner al blue team. <br>
 
-Volviendo a las funcionalidades del grunt tenemos diferentes acciones ya preconfiguradas que nos permite ejecutar le grunt directamente en la máquina. En mi caso para realizar la prueba os dejo un simple whoami con el usuario normal. 
+Volviendo a las funcionalidades del grunt tenemos diferentes acciones ya preconfiguradas que nos permite ejecutar le grunt directamente en la máquina. En mi caso para realizar la prueba os dejo un simple whoami con el usuario normal. <br>
 ![Desktop View](/assets/img/covenantc2/17.png)
 
-Parte de lo chulo de tener nuestro propio C2 es que podemos preparar herramientas para desplegarse de manera sencilla en las máquinas que comprometemos. En este caso por ejemplo he ejecutado como administrador el launcher para tener privilegios y he ejecutado un dump de SAM con mimikatz en un solo comando y sin tener que dropear un mimikatz a la máquina y enfrentarnos a ese problema de detección (aunque nos estamos enfrentando a otros con la propia ejecución... no significa que no seamos detectables.)
+Parte de lo chulo de tener nuestro propio C2 es que podemos preparar herramientas para desplegarse de manera sencilla en las máquinas que comprometemos. En este caso por ejemplo he ejecutado como administrador el launcher para tener privilegios y he ejecutado un dump de SAM con mimikatz en un solo comando y sin tener que dropear un mimikatz a la máquina y enfrentarnos a ese problema de detección (aunque nos estamos enfrentando a otros con la propia ejecución... no significa que no seamos detectables.)<br>
 ![Desktop View](/assets/img/covenantc2/18.png)
 
 
 ## 6. Datos y gráficos
-Una de las duncionalidades que tenemos es un gráfico de los implantes que tenemos y desde que listeners se están consumiendo. 
+Una de las duncionalidades que tenemos es un gráfico de los implantes que tenemos y desde que listeners se están consumiendo.  <br>
 ![Desktop View](/assets/img/covenantc2/19.png)
 
-Aunque una de las más interesantes en lso C2 (Sobre todo para los más desorganizados) es el almacenar información relevante del propio ejercicio. En este caso por ejemplo tenemos los hashes obtenidos durante las acciones que he realizado. 
+Aunque una de las más interesantes en lso C2 (Sobre todo para los más desorganizados) es el almacenar información relevante del propio ejercicio. En este caso por ejemplo tenemos los hashes obtenidos durante las acciones que he realizado. <br> 
 ![Desktop View](/assets/img/covenantc2/20.png)
 
 Aunque podemos obtener también otra información que hemos centralizado en el C2 para facilitarnos nuestro trabajo. 
 
-
 ## 7. Task
-Las task que tenemos por defecto vienen preparadas para poder ejecutar acciones de diferentes tipos sobre nuestro implante, maliciosas o normales. 
+Las task que tenemos por defecto vienen preparadas para poder ejecutar acciones de diferentes tipos sobre nuestro implante, maliciosas o normales. <br>
 ![Desktop View](/assets/img/covenantc2/21.png)
 
 Lo mejor de todo esto es que podemos crear las que nosotros queramos e implementarlas. Gran parte de este código parte de librerias de código, ensabladores y recursos embebidos que también pueden ser modificados e incluidos para poder trabajar de manera sencilla. Por lo que si queremos incluir nuevas herramientas podemos customizarlo facilmente. <br>
-También podremos ver un listado de cada unas de las acciones que hemos ejecutado como un timelog. 
+También podremos ver un listado de cada unas de las acciones que hemos ejecutado como un timelog. <br>
 ![Desktop View](/assets/img/covenantc2/22.png) 
 
 
 ## 8. Implant Templates
-Una de las facilidades que nos da Covenant es la posibilidad de escribir en C# nuestros propios implantes para comunicarnos con el C2. Eso nos ayuda de cara a evadir detecciones y establecer capabilities en nuestro implante de manera sencilla. 
+Una de las facilidades que nos da Covenant es la posibilidad de escribir en C# nuestros propios implantes para comunicarnos con el C2. Eso nos ayuda de cara a evadir detecciones y establecer capabilities en nuestro implante de manera sencilla. <br>
 ![Desktop View](/assets/img/covenantc2/23.png) 
 
-Además podemos modificar las propias templates de implantes que nos da Covenant para poder modificar lo que necesitemos. 
+Además podemos modificar las propias templates de implantes que nos da Covenant para poder modificar lo que necesitemos. <br>
 ![Desktop View](/assets/img/covenantc2/24.png)
 
 
