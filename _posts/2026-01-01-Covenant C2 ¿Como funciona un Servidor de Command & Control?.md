@@ -128,10 +128,10 @@ while((gv r).Value -gt 0){
 ![Desktop View](/assets/img/covenantc2/11.jpeg)
 
 Es decir, que con este código estamos decodificando y descomprimiendo un assembly que se encuentra dentro de un base64 y ejecutandolo en memoria.... vale, pues ya sabemos algo más no? ¿Esto es lo que se conoce como un malware fileless no? capaz de evadir hasta los EDRs más sofisticados y sortear las mejores protecciones del mercado. Y todo gratis, fácil y usable. Automatizable.....
-![Desktop View](/assets/img/covenantc2/12.jpeg)
+![Desktop View](/assets/img/covenantc2/12.png)
 
 Vamos no me jodas. Hasta el windows defender nos ha pillado.... Además de parar la ejecución si nos fijamos ha hecho dos cosas 1)Ha clasificado nuestro payload como Covenant y 2)Nos dice que proceso ha sido y que ha sido detectado mediante [**AMSI**](https://learn.microsoft.com/es-es/windows/win32/amsi/antimalware-scan-interface-portal) . 
-![Desktop View](/assets/img/covenantc2/13.jpeg)
+![Desktop View](/assets/img/covenantc2/13.jpg)
 
 
 Bueno no frustrarse, esto es normal. Vamos a hacer una pequeñisima introducción a que ha pasado y en otro post comentaré con más detalles como funcionan estos controles y bypases a estos. Básicamente la detección se ha fundamentado en dos factores:
