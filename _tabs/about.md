@@ -15,7 +15,6 @@ Mi nombre es Antonio, aunque todo el mundo me llama Andi. Tengo 28 años y traba
 ### Certificaciones actuales: <br>
 
 ![Desktop View](/assets/img/MDA.png){: width="140" height="140" }
-
 <a href="https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com">
   <img src="https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image" alt="Red Team Operator" width="140" height="140"/>
 </a>
