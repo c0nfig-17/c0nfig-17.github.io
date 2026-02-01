@@ -22,26 +22,11 @@ Mi nombre es Antonio, aunque todo el mundo me llama Andi. Tengo 28 años y traba
   <img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3" alt="eJPT Certification" width="120" height="120"/>
 </a>
 
-<h3>Certificaciones actuales:</h3>
+### Certificaciones actuales
 
-<div style="display:flex; align-items:center; gap:30px;">
-  <img src="/assets/img/MDA.png" width="240" height="240" />
-
-  <a href="https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com">
-    <img src="https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image"
-         alt="Red Team Operator"
-         width="140"
-         height="140"/>
-  </a>
-
-  <a href="https://certs.ine.com/fa3ac3a4-8855-443c-b155-fae01aa7caab#acc.riynwDEO">
-    <img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3"
-         alt="eJPT Certification"
-         width="120"
-         height="120"/>
-  </a>
-</div>
-
+| | | |
+|:--:|:--:|:--:|
+| ![](/assets/img/MDA.png){: width="240" height="240" } | [![Red Team Operator](https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image)](https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com) | [![eJPT Certification](https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3)](https://certs.ine.com/fa3ac3a4-8855-443c-b155-fae01aa7caab#acc.riynwDEO) |
 
 
 
