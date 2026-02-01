@@ -8,7 +8,6 @@ order: 4
 ## Whoami
 Mi nombre es Antonio, aunque todo el mundo me llama Andi. Tengo 28 años y trabajo remotamente desde Sevilla. Trabajo como Responsable de Seguridad Ofensiva en Rural Servicios Informáticos (RSI) como proyecto de STEMDO. Tengo varios años de experiencia trabajando en IT como Administrador de Sistemas e Incident Manager en proyectos de grandes infraestructuras e infraestructuras críticas. Desde 2023 trabajo en RSI en el departamento de ciberseguridad progresando hasta ser responsable de seguridad ofensiva y compatibilizándolo como profesor de ciberseguridad en algunos momentos. Me gusta investigar sobre ciberseguridad y trabajo como Responsable de Seguridad Ofensiva. Tengo experiencia y formación en el campo y trato de organizarla mediante este blog para ayudar a otros compañeros como me gustaría que hiciesen conmigo. Me especializo en técnicas ofensivas, análisis de vulnerabilidades, red teaming y simulación de adversarios.
 
-Si quieres contactar conmigo lo puedes hacer mediante [**linkedin**](https://www.linkedin.com/in/antoniodseri47/) . <br>
 
 > No me hago responsable de cualquier uso malintencionado o equivocado del contenido expuesto o cualquiera de sus referencias.
 {: .prompt-danger }
