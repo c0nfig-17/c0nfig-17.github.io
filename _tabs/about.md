@@ -15,7 +15,8 @@ Si quieres contactar conmigo lo puedes hacer mediante [**linkedin**](https://www
 
 ### Certificaciones actuales: <br>
 
-![Desktop View](/assets/img/MDA.png){: width="972" height="589" }
+![Desktop View](/assets/img/MDA.png){: width="972" height="589" } <br>
+
 <a href="https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com">
   <img src="https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image" alt="Red Team Operator" width="120" height="120"/>
 </a>
