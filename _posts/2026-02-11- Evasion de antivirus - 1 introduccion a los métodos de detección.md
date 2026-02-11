@@ -1,5 +1,5 @@
 ---
-title: Evasión de Antivirus: 1.Introducción a los métodos de detección
+title: Evasión de Antivirus 1- Introducción a los métodos de detección
 description: Comenzamos una serie de artículos sobre métodos de detección, analisís y evasión de malware. 
 date: 2026-02-11
 categories: [evasion]
@@ -139,3 +139,4 @@ Si esta publicación te ha sido útil y quieres apoyar mi trabajo para que conti
 ¡Gracias por tu apoyo! 🙏
 
 ![Desktop View](/assets/img/banner.png) <br>
+
