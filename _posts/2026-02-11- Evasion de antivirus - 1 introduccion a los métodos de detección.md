@@ -30,7 +30,7 @@ _Causa por la que, después de varios desafortunados intentos de hacer algo por 
 ## 2. Que es es un antimalware/Antivirus y un EDR
 Un antivirus es la herramienta que se nos ocurrió a los informáticos para parar un problema que habíamos generado nosotros mismos. Básicamente es un software que es capaz de realizar x tipo de comprobaciones (en las cuales profundizaremos) que permiten discernir que es bueno y que "parece ser" malo. Como hemos dicho en este campo la intención importa y diferenciarlo es dificil. Es por ello que los antivirus han ido volviendose más sofisticados y los atacantes han ido saltandose esas sofisticaciones. Parche tras parche y según todo se hacía más complejo aparecieron herramientas nuevas o complementarias al antivirus que funcionan como un conjunto del mismo para defenderte del malware, todo eso hasta llegar a la máquina definitiva: los Endpoind Detection & Response (EDR). Los EDR los podemos definir como un cacharro de cacharros más potente (y caro) que pasa a entender el malware de un dispositivo a un conjunto de dispositivos. Entraremos con mucho más detalle en adelante e iremos viendo diferentes controles. Es importante entender que no es solo un antivirus de empresa, tiene su módulo básico de antimalware pero tiene chorrecientasmil configuraciones y detalles más los cuales deben de estar operados por alguien, normalmente un SOC en 24/7 de la propia empresa o subcontratado, que se encarga de diferenciar entre el bien, el mal y lo que parece bueno. 
 
-![Desktop View](/assets/img/malware1/2.jpeg)
+![Desktop View](/assets/img/malware1/2.jpg)
 
 Es importante que entendamos en este punto dos cosas 1) Nos vamos a frustrar tratando de entender como bypasear los controles de un Antivirus y cuando lleguemos la EDR pensaremos que nada a valido la pena y 2) Nada en esta vida es irrompible, siempre tendrás una manera de saltarte un control. <br>
 
@@ -89,11 +89,11 @@ El primer caso es evidente. Sobre el tercero creo que se puede poner el ejemplo 
 
 Existen varias maneras de jugar con los firmados de cara a mejorar la evasión de un fichero. Es muy conocido las noticias de ataques en las que se han robado firmas y posteriormente distribuido malware firmado como si fuese legitimo, además si buscas un poco puedes encontrar firmas públicas, aunque no vamos a dar indicaciones ya que son acciones ilegales que se estarían empezando a tomar dentro del proceso de evasión (y no necesariamente alineadas tampoco con un OPSEC en el depliegue de un ejercicio). Pero si entra la posibilidad de autofirmarnos. Vamos a hacer la prueba, primero generaremos un payload sencillo con msfvenom en el que basicamente ejecutamos la calculadora. 
 
-![Desktop View](/assets/img/malware1/12.jpeg)
+![Desktop View](/assets/img/malware1/12.png)
 
 Posteriormente lo analizamos con virustotal y podemos ver que se detecta por todos los motores de manera muy sencilla (sigo pensando que hay muchos que son fake).
 
-![Desktop View](/assets/img/malware1/13.jpeg)
+![Desktop View](/assets/img/malware1/13.png)
 
 Bueno ahora vamos a firmar nuestro propio binario con nuestro propio certificado para ver si algo cambia. El certificado como somos pobres lo vamos a generar nosotros mismos, aunque podrías comprar uno y que lo firme un tercero. Primero generamos el certificado
 
@@ -110,12 +110,12 @@ osslsigncode sign -pkcs12 sign.pfx -pass galleta -in calc.exe -out calc_signed.e
 
 Subimos el fichero a virustotal de nuevo y como vemos ha cambiado el hash del fichero. 
 
-![Desktop View](/assets/img/malware1/14.jpeg)
+![Desktop View](/assets/img/malware1/14.png)
 
 Bueno, hemos descubierto que un certificado autofirmado consigue bajar en 2 los antivirus que detectan que un payload muy conocido es malicioso. Desde luego menos da una piedra, pero ¿y si con solo eso y usando algo custom nos ayuda a reducir el número? Desde luego de la misma manera que no usar un certificado puede ayudar a desconfiar el usarlo pero que no sea de confianza puede levantar sospechas, además si detectan un payload firmado y no es una firma reputada se pueden realizar detecciones a partir de la firma, por lo que es una cuestión de ajustarnos a la necesidad que tenemos en un momento concreto y profundizar en los métodos de detección. 
 
 
-![Desktop View](/assets/img/malware1/11.jpeg)
+![Desktop View](/assets/img/malware1/11.jpg)
 
 
 ---
@@ -137,4 +137,5 @@ Si esta publicación te ha sido útil y quieres apoyar mi trabajo para que conti
 ---
 
 ¡Gracias por tu apoyo! 🙏
+
 ![Desktop View](/assets/img/banner.png) <br>
