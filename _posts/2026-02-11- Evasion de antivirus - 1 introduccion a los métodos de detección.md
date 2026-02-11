@@ -14,7 +14,7 @@ Quizás sea un poco pesado pero repito, el objetivo no es dar un paso a paso ni 
 Aclarar que tampoco se van a dar "soluciones maestras" a los problemas que se van a ir planteando, ni tampoco definiciones academicas, sino comportamientos reales y el aprendizaje que humildemente puedo tener sobre el campo y que puede (o no) ayudar a compañeros/as del campo (o eso espero). <br>
 Una vez realizadas 80 aclaraciones sobre el tema, creo que se ha entendido el punto. 
 
-![Desktop View](/assets/img/malware1/1.jpeg)
+![Desktop View](/assets/img/malware1/1.jpeg){: width="400" }
 
 
 ## 1. Que es esto del malware y los virus
@@ -62,7 +62,7 @@ Este es el motivo por el que cuando descargas el phothosop pirata te piden quita
 
 Ahora, vale tu phothosp pirata es imposible que sea un virus y menos por ese motivo, por lo que te voy a dar un ejemplo práctico. Nos vamos a ir a [**Malware Bazaar**](https://bazaar.abuse.ch/sample/b70e78971fc44f8413447139afe777f19fd1b0d203f2d40f66f41cd6100a1c95/) y buscaremos un malware que queramos, en mi caso he buscado un ransomware que parece ser Conti el cual ha sido detectado y flagueado y del que te puedes descargar una muestra, la propia web ya te dice que es malicioso.
 
-![Desktop View](/assets/img/malware1/7.png)
+![Desktop View](/assets/img/malware1/7.png){: width="400" }
 
 Vamos a irnos a Virus total y hacer una busqueda sencilla. Como podemos ver hemos podido consultar si un fichero es malware, aunque sabemos que si pusiesemos una palabra en el programa el hash cambiaría y dejaría de ser detectable con este método. 
 
@@ -139,4 +139,5 @@ Si esta publicación te ha sido útil y quieres apoyar mi trabajo para que conti
 ¡Gracias por tu apoyo! 🙏
 
 ![Desktop View](/assets/img/banner.png) <br>
+
 
