@@ -11,7 +11,7 @@ image:
 ## 1. Evilginx y el robo de tokens
 Hace ya unos meses motivado por una PoC que estaba desarrollando escribí [**Phishing OPS para Red Teaming**](https://c0nfig17.com/posts/Phishing-OPS/) donde contaba un poco el despliegue de un GoPhish y Evilginx para el robo de credenciales y tokens para accesos iniciales. En este caso quiero profundizar en la parte de despliegue de [**Evilginx**](https://github.com/kgretzky/evilginx2/tree/master/) y captura de tokens. Para esto voy a dar algunas cosas por supuestas que se veían en el post anterior así como no voy a hacer despliegue alguno de Gophish o su integración con Evilginx ya que simplemente no me quiero centrar en ello. Vamos a tratar algunas cuestiones sobre Evilginx y su despliegue, OPSEC, monitorización y como evitar que nuestro phishing sea detectado a los 5 minutos. <br>
 
-![Desktop View](/assets/img/evilginx1/1.jpeg)
+![Desktop View](/assets/img/evilginx1/1.jpeg){: width="972" height="589" }
 
 Antes de todo, creo que es importante por la actualidad del tema, dejaros este artículo de Kuba Gretzky el creador de Evilginx que creo que es importante. Todo lo que vamos a hacer aquí es usando como base software libre,aunque exista una versión privativa, y creo que no está de más introducir un poco este tipo de cosas dado que al sector de la seguridad creo que nos va a afectar enormemente, echadle un vistazo! [**Open Source is Dying**](https://breakdev.org/open-source-is-dying/) .
 
@@ -19,12 +19,12 @@ Antes de todo, creo que es importante por la actualidad del tema, dejaros este a
 ## 2. Despliegue rápido
 Dicho esto, tras las 8 millones de instalaciones que he tenido que hacer de Evilginx he elaborado un script ya que preveo varios millones de instalaciones más los próximos meses. Si teneís la versión pro de Evilginx teneís otro método de instalación completamente diferente al mio y que os recomiendo usar, yo simplemente he hecho algo sencillo para ubuntu que a mi me funciona. Lo dejo por aquí por si alguien le es de interés, pero no es nada revolucionario, de hecho es una lista de todas las cosas que hacía antes de instalarlo pasado con Claude [**Easy_Evil**](https://github.com/c0nfig-17/easy_evil) . 
 
-![Desktop View](/assets/img/evilginx1/2.jpeg)
+![Desktop View](/assets/img/evilginx1/2.jpeg){: width="972" height="589" }
 
 ## 3. Consideraciones iniciales
 Antes de empezar con detalles creo que es importante hacer una lista con algunas cuestiones que es importante tener en cuenta como tal sobre las actividades que vamos a replicar. Vamos a desplegar infra en internet por lo que automáticamente miles de personas van a monitorizarnos como vimos en [**HoneyPots y escáneres masivos**](https://c0nfig17.com/posts/Honeypots-y-esc%C3%A1neres-masivos/) . Es importante no solo desplegar la operación sino aparentar que la misma lo más normal posible de cara a evitar que nuestro phishing se vaya al traste. Estamos haciendo Red Teaming por lo que no vamos a intentar hacer cosas masivas a las que caerá "alguien random". Es por ello que existen cosas que tenemos que tener en cuenta como la reputación de la IP y el dominio sobre el cual desplegamos todo o incluso el sistema operativo que aparenta tener. Cuanto más real parezca o sea todo mejor, de hecho en phishing reales he visto como atacantes usaban servicios comprometidos a terceros en sharepoint por ejemplo para usarlos como redirector al panel de phishing. En resumen, mi idea aquí no es un tutoríal de como desplegar Evilginx, sino enseñar las soluciones que he encontrado a problemas con los que ya me he chocado. En resumen:
 
-![Desktop View](/assets/img/evilginx1/charmander.jpeg)
+![Desktop View](/assets/img/evilginx1/charmander.jpeg){: width="972" height="589" }
 
 Según voy escribiendo esto me doy cuenta que probablemente existan puntos que tengamos que ver en un segundo artículo, ya que son bastantes los puntos a tocar. 
 
@@ -71,7 +71,7 @@ Como hemos visto mucha gente va a tratar de echar un vistazo a nuestro phishlet 
 
 La blacklist se almacenará en ```/root/.evilginx/blacklist.txt``` con las IPs que detectes. Lo suyo sería tener una lista con los rangos e ips que vayas detectando que están monitorizando comportamientos maliciosos. Creo que es obvio, pero no voy a proporcionar un listado así, si sabes lo que haces sabrás generarlo. <br>
 
-![Desktop View](/assets/img/evilginx1/7.jpeg)
+![Desktop View](/assets/img/evilginx1/7.jpeg){: width="972" height="589" }
 
 Por si te es de ayuda yo he realizado una blacklilst exponiendo un evilginx real durante un tiempo y extrayendo blacklist de ips de mala reputación, con eso podrás quitarte algo de ruido de manera sencilla, en el script del principio incluyo esa blacklist inicial. <br>
 
@@ -81,7 +81,7 @@ Algunos de los IOCs existentes en evilginx están creados a propósito por el cr
 
 Creo que una vez visto esto hemos avanzado bastante para un solo post. Más adelante publicaré otro con más arreglos a realizar! <br>
 
-![Desktop View](/assets/img/evilginx1/8.jpeg)
+![Desktop View](/assets/img/evilginx1/8.jpeg){: width="972" height="589" }
 
 
 ---
