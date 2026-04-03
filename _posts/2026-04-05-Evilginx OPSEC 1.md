@@ -1,7 +1,7 @@
 ---
 title: Evilginx OPSEC 1
 description: Trataremos algunas consideraciones sobre OPSEC y evasión en phishing con Evilginx. 
-date: 2026-04-05
+date: 2026-04-03
 categories: [Email]
 tags: [opsec, Evasion, email, Ofuscación, passwords]     # Los tags deben estar siempre en minúsculas.
 image:
