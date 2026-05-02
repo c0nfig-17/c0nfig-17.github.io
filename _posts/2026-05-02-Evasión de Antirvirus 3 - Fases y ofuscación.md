@@ -16,7 +16,7 @@ Cuando realices un Red Team sobre el cual apliques cada una de estas técnicas v
 Todo esto para decirte que si piensas aplicar una sola técnica en todo, como verás será completamente ineficaz. <br>
 Como puede que aún con este preeliminar no quede claro a lo que me refiero, resumo todo lo anterior en lo siguiente: <br>
 
-![Desktop View](/assets/img/malware3/1.jpeg)
+![Desktop View](/assets/img/malware3/1.jpeg){: width="486" height="294" }
 
 ## 2. ¿Que es la ofuscación?
 La ofuscación es de manera muy muy general una serie de técnicas que nos permiten ocultar algo para evitar su análisis y detección. Existen multitud de herramientas para ofuscar el contenido de nuestro payload, aunque para ello es bastante importante tener claro que es lo queremos ofuscar. Un error bastante común es usar herramientas de ofuscación "a lo bruto" es decir, coger un payload, pasarlo por herramienta X que hemos encontrado en Github y está de moda y a otra cosa. Tenemos que tener en cuenta que la ofuscación es algo llamativo. Aún así vamos a comenzar con métodos sencillos para entender a que nos estamos refiriendo. <br>
