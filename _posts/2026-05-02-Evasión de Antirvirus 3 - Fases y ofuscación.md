@@ -96,7 +96,7 @@ pOWeRshell —co"mM" "& 'C:\P"r"og"ra"m F"iles\WinR"A"R\ra"r.e"x"e' a -"m"5 -"h"
 Realmente el comando ejecuta lo mismo pero hemos cambiado lo que se muestra por commandline, esto dificulta que por ejemplo exista una regla en la que que si ejecutas C:\Program Files\WinRAR\rar.exe salte el antivirus ya que la detección por commandline se dificulta. Logicamente existen muchos (muchisimos) más métodos de detección. En este punto os puedo recomendar [**argfuscator.net**](https://argfuscator.net/) con su [**repositorio de github**](https://github.com/wietze/ArgFuscator.net) por si lo quieres en local. Teneís un [**artículo detallado**](https://www.wietzebeukema.nl/blog/bypassing-detections-with-command-line-obfuscation) del creador [**Wietze Beukema**](https://www.wietzebeukema.nl/) en el cual ayuda a comprender esta técnica en profundidad. 
 
 
-![Desktop View](/assets/img/evilginx2/10.png)
+![Desktop View](/assets/img/malware3/10.png)
 
 
 
