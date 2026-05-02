@@ -1,7 +1,7 @@
 ---
 title: Evasión de Antivirus 3 - Fases y ofuscación
 description: Comenzamos a ver métodos de ofuscación
-date: 2026-05-03
+date: 2026-05-02
 categories: [evasion]
 tags: [opsec, Evasion, bypass, Ofuscación, redteam, Formación]     # Los tags deben estar siempre en minúsculas.
 image:
