@@ -15,13 +15,20 @@ Mi nombre es Antonio, aunque todo el mundo me llama Andi. Tengo 29 años y traba
 
 ### Certificaciones:
 
-![CRTL Certification](https://eu.api.accredible.com/v1/frontend/credential_website_embed_image/badge/20274158)
-
-![MDA Certification](/assets/img/MDA.png)
-
-![Red Team Operator](https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image)
-
-![eJPT Certification](https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3)
+<div style="text-align: center; margin: 20px 0;">
+  <a href="URL_CRTL" style="display: inline-block; margin: 10px;">
+    <img src="https://eu.api.accredible.com/v1/frontend/credential_website_embed_image/badge/20274158" alt="CRTL" style="width: 200px;">
+  </a>
+  <a href="#" style="display: inline-block; margin: 10px;">
+    <img src="/assets/img/MDA.png" alt="MDA" style="width: 200px;">
+  </a>
+  <a href="https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com" style="display: inline-block; margin: 10px;">
+    <img src="https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image" alt="Red Team" style="width: 200px;">
+  </a>
+  <a href="https://certs.ine.com/fa3ac3a4-8855-443c-b155-fae01aa7caab#acc.riynwDEO" style="display: inline-block; margin: 10px;">
+    <img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3" alt="eJPT" style="width: 200px;">
+  </a>
+</div>
 
 ### Congresos:
 
