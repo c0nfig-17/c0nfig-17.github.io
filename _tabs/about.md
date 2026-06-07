@@ -15,30 +15,10 @@ Mi nombre es Antonio, aunque todo el mundo me llama Andi. Tengo 29 años y traba
 
 ### Certificaciones:
 
-<table style="width: 100%; border: none; text-align: center;">
-  <tr>
-    <td style="border: none;">
-      <a href="URL_CRTL" target="_blank">
-        <img src="https://eu.api.accredible.com/v1/frontend/credential_website_embed_image/badge/20274158" alt="CRTL" width="200" style="border-radius: 8px;">
-      </a>
-    </td>
-    <td style="border: none;">
-      <a href="#" target="_blank">
-        <img src="/assets/img/MDA.png" alt="MDA" width="200" style="border-radius: 8px;">
-      </a>
-    </td>
-    <td style="border: none;">
-      <a href="https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com" target="_blank">
-        <img src="https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image" alt="Red Team" width="200" style="border-radius: 8px;">
-      </a>
-    </td>
-    <td style="border: none;">
-      <a href="https://certs.ine.com/fa3ac3a4-8855-443c-b155-fae01aa7caab#acc.riynwDEO" target="_blank">
-        <img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3" alt="eJPT" width="200" style="border-radius: 8px;">
-      </a>
-    </td>
-  </tr>
-</table>
+[![CRTL](https://eu.api.accredible.com/v1/frontend/credential_website_embed_image/badge/20274158)](https://eu.api.accredible.com/v1/frontend/credential_website_embed_image/badge/20274158)
+[![MDA](/assets/img/MDA.png){: width="200"}](/about)
+[![Red Team](https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image)](https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com){:target="_blank"}
+[![eJPT](https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3)](https://certs.ine.com/fa3ac3a4-8855-443c-b155-fae01aa7caab#acc.riynwDEO){:target="_blank"}
 
 ### Congresos:
 
