@@ -12,7 +12,6 @@ Mi nombre es Antonio, aunque todo el mundo me llama Andi. Tengo 29 años y traba
 {: .prompt-danger }
 
 
-
 ### Certificaciones:
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; margin: 20px 0;">
@@ -20,13 +19,13 @@ Mi nombre es Antonio, aunque todo el mundo me llama Andi. Tengo 29 años y traba
     <img src="https://eu.api.accredible.com/v1/frontend/credential_website_embed_image/badge/20274158" alt="CRTL" width="200" height="200" style="object-fit: contain;">
   </a>
   <a href="#" target="_blank">
-    <img src="/assets/img/MDA.png" alt="MDA" width="200" height="200" style="object-fit: contain;">
+    <img src="/assets/img/MDA.png" alt="MDA" width="240" height="240" style="object-fit: contain;">
   </a>
   <a href="https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com" target="_blank">
     <img src="https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image" alt="Red Team" width="200" height="200" style="object-fit: contain;">
   </a>
   <a href="https://certs.ine.com/fa3ac3a4-8855-443c-b155-fae01aa7caab#acc.riynwDEO" target="_blank">
-    <img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3" alt="eJPT" width="200" height="200" style="object-fit: contain;">
+    <img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3" alt="eJPT" width="160" height="160" style="object-fit: contain;">
   </a>
 </div>
 
