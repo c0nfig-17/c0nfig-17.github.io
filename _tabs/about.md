@@ -17,7 +17,7 @@ Mi nombre es Antonio, aunque todo el mundo me llama Andi. Tengo 29 años y traba
 
 | | | | |
 |:--:|:--:|:--:|:--:|
-| [![CRTL Certification](https://eu.api.accredible.com/v1/frontend/credential_website_embed_image/badge/20274158)](URL_CRTL) | ![](/assets/img/MDA.png){: width="280" height="280" } | [![Red Team Operator](https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image)](https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com) | [![eJPT Certification](https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3)](https://certs.ine.com/fa3ac3a4-8855-443c-b155-fae01aa7caab#acc.riynwDEO) |
+| [![CRTL Certification](https://eu.api.accredible.com/v1/frontend/credential_website_embed_image/badge/20274158)](URL_CRTL) | [![MDA Certification](/assets/img/MDA.png){: width="280" height="280" }](/assets/img/MDA.png) | [![Red Team Operator](https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image)](https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com) | [![eJPT Certification](https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3)](https://certs.ine.com/fa3ac3a4-8855-443c-b155-fae01aa7caab#acc.riynwDEO) |
 
 ### Congresos:
 
