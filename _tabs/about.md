@@ -15,16 +15,19 @@ Mi nombre es Antonio, aunque todo el mundo me llama Andi. Tengo 29 años y traba
 
 ### Certificaciones:
 
-<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-
-[![CRTL Certification](https://eu.api.accredible.com/v1/frontend/credential_website_embed_image/badge/20274158)](URL_CRTL)
-
-[![MDA Certification](/assets/img/MDA.png){: width="280" height="280" }](/assets/img/MDA.png)
-
-[![Red Team Operator](https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image)](https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com)
-
-[![eJPT Certification](https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3)](https://certs.ine.com/fa3ac3a4-8855-443c-b155-fae01aa7caab#acc.riynwDEO)
-
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+  <a href="URL_CRTL">
+    <img src="https://eu.api.accredible.com/v1/frontend/credential_website_embed_image/badge/20274158" alt="CRTL Certification" style="width: 280px; height: 280px;">
+  </a>
+  <a href="#">
+    <img src="/assets/img/MDA.png" alt="MDA Certification" style="width: 280px; height: 280px;">
+  </a>
+  <a href="https://eu.badgr.com/public/assertions/p5pFRJ94TDaTixY-0eMmdA?identity__email=antonio.seri.97%40gmail.com">
+    <img src="https://api.eu.badgr.io/public/assertions/p5pFRJ94TDaTixY-0eMmdA/image" alt="Red Team Operator" style="width: 280px; height: 280px;">
+  </a>
+  <a href="https://certs.ine.com/fa3ac3a4-8855-443c-b155-fae01aa7caab#acc.riynwDEO">
+    <img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3wze0lx3007irps13e6k3" alt="eJPT Certification" style="width: 280px; height: 280px;">
+  </a>
 </div>
 
 ### Congresos:
