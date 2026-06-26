@@ -5,7 +5,7 @@ date: 2026-06-26
 categories: [c2]
 tags: [redteam, bypass, evasion, pentesting, opsec,malware, ofuscación ]     # Los tags deben estar siempre en minúsculas.
 image:
-  path: /assets/img/adaptix/0.jpeg
+  path: /assets/img/adaptix/0.jpg
 
 ---
 ## 1. Adaptix C2 
