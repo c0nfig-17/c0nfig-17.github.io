@@ -89,7 +89,7 @@ Con esto simplemente inicio mi servidor <br>
 
 Inicias el cliente <br>
 
-![Desktop View](/assets/img/adaptix/3.png)
+![Desktop View](/assets/img/adaptix/3.png){: width="486" height="294" }
 
 Inicias sesión y te conectas al C2 <br>
 
@@ -97,7 +97,7 @@ Inicias sesión y te conectas al C2 <br>
 
 Una cosa que me gusta de Adaptix es que puedes tener también clientes en Windows, lo cual a mi personalmente me facilita la vida para temas de evasión. Aunque tienes que tener en cuenta que muchas configuraciones no se replicarán ya que dependen del perfil del cliente y no del teamserver. Por lo que puede ser una facilidad pero en Cobalt Strike mi impresión es que se trabaja de manera un poco más ágil. <br>
 
-![Desktop View](/assets/img/adaptix/5.png)
+![Desktop View](/assets/img/adaptix/5.png){: width="486" height="294" }
 
 En este punto cargamos el AXS del extension Kit y ya tendriamos todos los BOFs disponibles en nuestra sesión actual. <br>
 
@@ -105,7 +105,7 @@ En este punto cargamos el AXS del extension Kit y ya tendriamos todos los BOFs d
 
 El proceso de uso es bastante similar al de CobaltStrike. Primero debes de generar un listener y después tendrás que generar un beacon para el uso concreto que quieras hacer. <br> 
 
-![Desktop View](/assets/img/adaptix/7.png)
+![Desktop View](/assets/img/adaptix/7.png){: width="486" height="294" }
 
 
 > Personalmente he perdido más tiempo del que me gustaría reconocer por no leer [**la documentación oficial sobre el profile de Kharon**](https://github.com/entropy-z/Kharon/blob/main/doc/5.%20HttpProfile.md) , la cual funciona como un Malleable. He tenido bastantes errores simplemente porque el propio Adaptix me pide un perfil en json que estaba al parecer en la ruta /opt/adaptixc2/Kharon/listener_kharon_http/profiles . 
@@ -113,14 +113,12 @@ El proceso de uso es bastante similar al de CobaltStrike. Primero debes de gener
 
 Una vez configurado el listener tienes que generar tu primer agente. Ya aquí a gusto del consumidor respecto de su configuración. <br>
 
-![Desktop View](/assets/img/adaptix/8.png)
+![Desktop View](/assets/img/adaptix/8.png){: width="486" height="294" }
 
 > Recuerda revisar bien el setup que has hecho de [**la documentación oficial sobre el profile de Kharon**](https://github.com/entropy-z/Kharon/blob/main/doc/2.%20Setup.md) si no quieres tener errores.
 {: .prompt-warning }
 
 Simplemente te llevas el agente a tu máquina windows y ahí lo tienes! <br>
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ![Desktop View](/assets/img/adaptix/9.png)
 
@@ -162,7 +160,7 @@ En este punto comprobamos el funcionamiento correcto y que recibo la conectivida
 ![Desktop View](/assets/img/adaptix/16.png)
 
 
-![Desktop View](/assets/img/adaptix/15.jpeg)
+![Desktop View](/assets/img/adaptix/15.jpeg){: width="486" height="294" }
 
 
 ---
