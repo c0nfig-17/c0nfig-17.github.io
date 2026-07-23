@@ -151,7 +151,7 @@ En general vas a necesitar revisar y tratar de mejorar la reputación poco a poc
 [**FortiGuard**](https://www.fortiguard.com/webfilter) <br>
 [**PaloAlto**](https://urlfiltering.paloaltonetworks.com/) <br>
 [**trend Micro**](https://global.sitesafety.trendmicro.com/) <br>
-[**VirusTotal**](www.virustotal.com) <br>
+[**VirusTotal**](https://www.virustotal.com) <br>
 
 Recuerda que pueden existir cambios en tu dominio que no se hayan propagado y en consecuencia no hayan llegado a nuevos servicios. Te recomiendo revisar  [**dnschecker**](https://dnschecker.org/) .  <br>
 
