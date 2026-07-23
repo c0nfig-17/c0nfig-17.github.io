@@ -34,7 +34,7 @@ También nos podemos encontrar con situaciones como la llamada a un portal de ph
 ### 1.2 La Capa 8
 Tienes que tener inventiva con el [**usuario**](https://mundowdg.com/blog/diccionario-luser-cristiano/) para no acabar pareciendote a él.  <br>
 
-![Desktop View](/assets/img/domain/2.jpeg)
+![Desktop View](/assets/img/domain/2.jpeg){: width="486" height="294" }
 
 
 ### 1.3 El analista e Inteligencia
@@ -46,7 +46,7 @@ En la mayoría de casos los equipos no solo cuentan con herramientas sino con ge
 
 Una vez escuche a un compañero referirse a los analistas de inteligencia como las "luces largas" de un coche, ya sabes, eso que te ayuda a ver si hay un jabalí en la carretera y te vas a meter una torta. Contar con inteligencia suele complicar la cosa ya que permite no solo que tus herramientas funcionen mejor y de manera más depurada sino acortar el tiempo en el que las nuevas técnicas, métodos o herramientas son útiles así como preveer cosas como que le pase a una empresa lo mismo que le pasa a otra. Para esto existen las [**MISP**](https://www.misp-project.org/) o programas de compartición de IOCs (y muchas otras cosas) como en el caso de España es la [**Red nacional de SOCs**](https://rns.ccn-cert.cni.es/) .  <br>
 
-![Desktop View](/assets/img/domain/3.jpeg)
+![Desktop View](/assets/img/domain/3.jpeg){: width="486" height="294" }
 
 El resumen de todo esto es: te va a tocar innovar y ser original. <br>
 
@@ -111,7 +111,7 @@ Te recomiendo revisar el post [**SPF, DKIM, DMARC & Fails**](https://c0nfig17.co
 Puede que estes leyendo esto y tengas que tener la categorización para mañana. Complicado. Un elemento importante es la antiguedad del dominio, sobre todo en el caso del phishing aquí tienes [**un caso real**](https://vitamail.vitanur.com/blogs/domain-age-email-deliverability-guide) .  Como ya puedes intuir cuanto más tiempo mejor, pero volver al pasado imposible. Por lo general no se recomienda usar dominios recien creados o menores a 6 meses. <br>
 En ese sentido la mejor opción es comprar dominios genéricos con tiempo y si tienes clientes habituales comprar para estos clientes con mucho tiempo. Así cuando los necesites en un ejercicio no estarás pillado. Lo recomendable en esta situación es proactivamente subir blogs que parezcan legitimos sobre temas poco polémicos o no categorizables como nsfw. Aunque puede ser una faena usar un wordpress por ejemplo con algunas herramientas de SEO puede ayudarte a mejorar la reputación poco a poco. <br>
 
-![Desktop View](/assets/img/domain/5.jpg)
+![Desktop View](/assets/img/domain/5.jpg){: width="486" height="294" }
 
 Si vas sin tiempo tienes que ir a por dominios expirados que puedas localizar. Puedes utilizar [**expired domains**](https://www.expireddomains.net/) para encontrar dominios legitimos y analizar antes de comprarlo si tienen buena reputación con diferentes herramientas. En ese sentido existen diferentes herramientas que sirven para optimizar tu busqueda. <br>
 
@@ -158,7 +158,7 @@ Recuerda que pueden existir cambios en tu dominio que no se hayan propagado y en
 Dicho esto, mucho ánimo con la busqueda. Si te tiran un dominio no pasa nada.... 
 
 
-![Desktop View](/assets/img/domain/6.jpeg)
+![Desktop View](/assets/img/domain/6.jpeg){: width="486" height="294" }
 
 
 
