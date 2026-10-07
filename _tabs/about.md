@@ -38,7 +38,7 @@ Mi nombre es Antonio, aunque todo el mundo me llama Andi. Tengo 29 años y traba
 ### Congresos:
 
 - [**Hackén 2026**](https://hacken.es/) - Métodos de persistencia en Windows -> [**Materiales de la ponencia**](https://github.com/c0nfig-17/Conferences-presentations/tree/main/2026-Hacken-2026-Persistencias-en-Windows)<br>
-- [**T-REX 2026**](https://hacken.es/) - Payload & tool protection and Anti-Analysis techniques for red teaming -> [**Materiales de la ponencia**](https://github.com/c0nfig-17/Conferences-presentations/tree/main/2026-T-REX-TIBER-ES-Payload-%26-tool-protection-and-Anti-Analysis-techniques-for-red-teaming)<br>
+- **T-REX 2026** - Payload & tool protection and Anti-Analysis techniques for red teaming -> [**Materiales de la ponencia**](https://github.com/c0nfig-17/Conferences-presentations/tree/main/2026-T-REX-TIBER-ES-Payload-%26-tool-protection-and-Anti-Analysis-techniques-for-red-teaming)<br>
 
 
 ### Formación:
